@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BA5DEB5424374C9C006A6BB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5DEB5324374C9C006A6BB8 /* AppDelegate.swift */; };
-		BA5DEB5624374C9C006A6BB8 /* VentilatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5DEB5524374C9C006A6BB8 /* VentilatorViewController.swift */; };
+		BA5DEB5624374C9C006A6BB8 /* VentivaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5DEB5524374C9C006A6BB8 /* VentivaderViewController.swift */; };
 		BA5DEB5924374C9C006A6BB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA5DEB5724374C9C006A6BB8 /* Main.storyboard */; };
 		BA5DEB5B24374C9F006A6BB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA5DEB5A24374C9F006A6BB8 /* Assets.xcassets */; };
 		BA5DEB5E24374C9F006A6BB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA5DEB5C24374C9F006A6BB8 /* LaunchScreen.storyboard */; };
@@ -28,7 +28,7 @@
 /* Begin PBXFileReference section */
 		BA5DEB5024374C9C006A6BB8 /* Ventivader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ventivader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA5DEB5324374C9C006A6BB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BA5DEB5524374C9C006A6BB8 /* VentilatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VentilatorViewController.swift; sourceTree = "<group>"; };
+		BA5DEB5524374C9C006A6BB8 /* VentivaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VentivaderViewController.swift; sourceTree = "<group>"; };
 		BA5DEB5824374C9C006A6BB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BA5DEB5A24374C9F006A6BB8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA5DEB5D24374C9F006A6BB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -109,7 +109,7 @@
 		BA5DEB7424375E49006A6BB8 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				BA5DEB5524374C9C006A6BB8 /* VentilatorViewController.swift */,
+				BA5DEB5524374C9C006A6BB8 /* VentivaderViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -253,7 +253,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA5DEB5624374C9C006A6BB8 /* VentilatorViewController.swift in Sources */,
+				BA5DEB5624374C9C006A6BB8 /* VentivaderViewController.swift in Sources */,
 				BA5DEB5424374C9C006A6BB8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

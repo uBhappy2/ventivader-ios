@@ -13,7 +13,7 @@
         <!--Ventilator View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" userLabel="Ventilator View Controller" customClass="ViewController" customModule="Ventivader" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" userLabel="Ventilator View Controller" customClass="VentivaderViewController" customModule="Ventivader" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -104,16 +104,25 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                         <state key="normal" title="Inhale"/>
+                                        <connections>
+                                            <action selector="inhale:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Be6-LF-cHg"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3zf-WL-vou">
                                         <rect key="frame" x="57" y="294" width="110" height="39"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                         <state key="normal" title="Exhale"/>
+                                        <connections>
+                                            <action selector="exhale:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Nc-tf-ZgO"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3mh-Qa-0FD">
                                         <rect key="frame" x="57" y="372" width="110" height="39"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                         <state key="normal" title="BPM"/>
+                                        <connections>
+                                            <action selector="bpm:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rx2-Te-7mC"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.45085787770000002" green="0.98829740290000001" blue="0.83763033149999999" alpha="0.12583892617449666" colorSpace="custom" customColorSpace="sRGB"/>
@@ -147,7 +156,7 @@
                                     <constraint firstItem="3mh-Qa-0FD" firstAttribute="leading" secondItem="kV7-ly-hsb" secondAttribute="leading" constant="57" id="JWU-l5-gBD"/>
                                     <constraint firstItem="8K8-Zo-yTj" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="MjO-Wo-X0m" secondAttribute="trailing" constant="8" symbolic="YES" id="M2J-av-hwu"/>
                                     <constraint firstItem="gqT-ts-ttB" firstAttribute="width" secondItem="MmT-Oa-bir" secondAttribute="width" id="MLl-Is-xBk"/>
-                                    <constraint firstItem="JxI-4G-QXS" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="P2P-5o-Q9C" secondAttribute="trailing" symbolic="YES" id="N0b-WO-aPs"/>
+                                    <constraint firstItem="JxI-4G-QXS" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="P2P-5o-Q9C" secondAttribute="trailing" constant="8" symbolic="YES" id="N0b-WO-aPs"/>
                                     <constraint firstItem="3mh-Qa-0FD" firstAttribute="bottom" secondItem="JxI-4G-QXS" secondAttribute="bottom" id="NRA-oo-QAd"/>
                                     <constraint firstItem="v9x-DK-Bhm" firstAttribute="height" secondItem="LQg-75-562" secondAttribute="height" id="OmK-rc-ned"/>
                                     <constraint firstItem="iFd-He-Yjb" firstAttribute="trailing" secondItem="MmT-Oa-bir" secondAttribute="trailing" id="PEh-YK-xkw"/>
@@ -186,7 +195,7 @@
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="P2P-5o-Q9C" secondAttribute="trailing" constant="20" symbolic="YES" id="oNp-WK-DIL"/>
                                     <constraint firstItem="gqT-ts-ttB" firstAttribute="centerY" secondItem="52n-7T-T5I" secondAttribute="centerY" id="oWn-oa-Q2P"/>
                                     <constraint firstAttribute="trailing" secondItem="cFF-wu-1V7" secondAttribute="trailing" constant="10" id="og2-29-ohN"/>
-                                    <constraint firstItem="iFd-He-Yjb" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="v9x-DK-Bhm" secondAttribute="trailing" symbolic="YES" id="pvH-Zu-Mh4"/>
+                                    <constraint firstItem="iFd-He-Yjb" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="v9x-DK-Bhm" secondAttribute="trailing" constant="8" symbolic="YES" id="pvH-Zu-Mh4"/>
                                     <constraint firstItem="iFd-He-Yjb" firstAttribute="height" secondItem="MmT-Oa-bir" secondAttribute="height" id="rCa-SP-1gA"/>
                                     <constraint firstAttribute="trailing" secondItem="gqT-ts-ttB" secondAttribute="trailing" constant="10" id="rXs-C6-rUe"/>
                                     <constraint firstItem="3mh-Qa-0FD" firstAttribute="height" secondItem="bRi-Sp-Et8" secondAttribute="height" id="sLz-8N-lda"/>
@@ -220,6 +229,12 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Ventilator Console" id="u7p-sf-JJu"/>
+                    <connections>
+                        <outlet property="exhaleHoldInSecs" destination="cFF-wu-1V7" id="sjb-v2-s1g"/>
+                        <outlet property="exhaleTimeInSecs" destination="iFd-He-Yjb" id="Myu-3x-mSZ"/>
+                        <outlet property="inhaleHoldInSecs" destination="gqT-ts-ttB" id="4i9-UR-LeF"/>
+                        <outlet property="inhaleTimeInSecs" destination="MmT-Oa-bir" id="01W-0d-Rdh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
