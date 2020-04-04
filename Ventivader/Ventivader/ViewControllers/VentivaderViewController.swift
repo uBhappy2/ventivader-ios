@@ -14,13 +14,18 @@ class VentivaderViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var inhaleHoldInSecs: UITextField!
     @IBOutlet weak var exhaleTimeInSecs: UITextField!
     @IBOutlet weak var exhaleHoldInSecs: UITextField!
-    @IBOutlet weak var ventilationCycle: UITextField!
-    
-    @IBOutlet weak var delegate: UITextFieldDelegate?
+    @IBOutlet weak var ventilationCycles: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view, typically from a nib.
+        self.inhaleTimeInSecs.delegate = self
+        self.inhaleHoldInSecs.delegate = self
+        self.exhaleTimeInSecs.delegate = self
+        self.exhaleHoldInSecs.delegate = self
+        self.ventilationCycles.delegate = self
+        
     }
 
     @IBAction func inhale(_ sender: UIButton) {
@@ -38,26 +43,36 @@ class VentivaderViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func handleInhaleTime(_ sender: UITextField) {
-        print("Handle inhale time ")
+        if let inhaleTime = sender.text {
+            print("Handle inhale time: \(inhaleTime) secs")
+        }
     }
     
     @IBAction func handleInhaleHoldTime(_ sender: UITextField) {
-        print("Handle inhale Hold time ")
+        if let inhaleHoldTime = sender.text {
+            print("Handle inhale Hold time: \(inhaleHoldTime) secs ")
+        }
     }
     
     
     @IBAction func handleExhaleTime(_ sender: UITextField) {
-        print("Handle exhale time ")
+        if let exhaleTime = sender.text {
+            print("Handle exhale time: \(exhaleTime) secs")
+        }
     }
     
     
     @IBAction func handleExhaleHoldTime(_ sender: UITextField) {
-        print("Handle exhale hold time")
+        if let exhaleHoldTime = sender.text {
+            print("Handle exhale hold time \(exhaleHoldTime) secs")
+        }
     }
     
     
     @IBAction func handleVentilationCycles(_ sender: UITextField) {
-        print("Handle ventilation cycles")
+        if let ventilationCyclesString = sender.text {
+            print("Handle ventilation cycles: \(ventilationCyclesString) ")
+        }
     }
 }
 

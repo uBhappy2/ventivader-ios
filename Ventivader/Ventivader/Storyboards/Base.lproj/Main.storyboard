@@ -62,30 +62,45 @@
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="handleInhaleTime:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="lNg-WQ-D2Q"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gqT-ts-ttB">
                                         <rect key="frame" x="513" y="218" width="310.5" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="handleInhaleHoldTime:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="AlS-lo-npD"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iFd-He-Yjb">
                                         <rect key="frame" x="513" y="268" width="310.5" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="handleExhaleTime:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="Bth-d6-wLU"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cFF-wu-1V7">
                                         <rect key="frame" x="513" y="326" width="310.5" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="handleExhaleHoldTime:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="pUh-rk-cQ0"/>
+                                        </connections>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JxI-4G-QXS">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JxI-4G-QXS" userLabel="Ventilation Cycles">
                                         <rect key="frame" x="513" y="381" width="310.5" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="handleVentilationCycles:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="tZ7-Nz-HaV"/>
+                                        </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MjO-Wo-X0m">
                                         <rect key="frame" x="84" y="641" width="71" height="46"/>
@@ -234,6 +249,7 @@
                         <outlet property="exhaleTimeInSecs" destination="iFd-He-Yjb" id="Myu-3x-mSZ"/>
                         <outlet property="inhaleHoldInSecs" destination="gqT-ts-ttB" id="4i9-UR-LeF"/>
                         <outlet property="inhaleTimeInSecs" destination="MmT-Oa-bir" id="01W-0d-Rdh"/>
+                        <outlet property="ventilationCycles" destination="JxI-4G-QXS" id="QJh-X2-5al"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
