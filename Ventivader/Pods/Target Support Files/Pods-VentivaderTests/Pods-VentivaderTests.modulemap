@@ -1,0 +1,6 @@
+framework module Pods_VentivaderTests {
+  umbrella header "Pods-VentivaderTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

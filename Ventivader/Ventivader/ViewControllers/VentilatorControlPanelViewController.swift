@@ -34,6 +34,16 @@ class VentilatorControlPanelViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         ventialorParametersCollectionView?.reloadData()
+            let alertController = UIAlertController(title: "Ventilator", message:
+                "BLE connected?", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "Yes", style: .default))
+        alertController.addAction(UIAlertAction(title: "No", style: .default,handler: { [weak self] alert in
+            DispatchQueue.main.async { [weak self] in
+                self?.performSegue(withIdentifier: "connectBLEFromControlPanel", sender: self)
+            }
+        }))
+
+        self.present(alertController, animated: true, completion: nil)
     }
     
     private func setupPlots() {
