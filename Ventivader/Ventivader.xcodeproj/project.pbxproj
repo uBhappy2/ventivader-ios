@@ -13,6 +13,18 @@
 		BA5DEB5B24374C9F006A6BB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA5DEB5A24374C9F006A6BB8 /* Assets.xcassets */; };
 		BA5DEB5E24374C9F006A6BB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA5DEB5C24374C9F006A6BB8 /* LaunchScreen.storyboard */; };
 		BA5DEB6924374C9F006A6BB8 /* VentivaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5DEB6824374C9F006A6BB8 /* VentivaderTests.swift */; };
+		D32627E8243A385C00CB212A /* VentilatorParametersManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32627E7243A385C00CB212A /* VentilatorParametersManager.swift */; };
+		D32627EA243A3C3800CB212A /* UpdateVentilatorParametersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32627E9243A3C3800CB212A /* UpdateVentilatorParametersViewModel.swift */; };
+		D32627EC243A468400CB212A /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32627EB243A468400CB212A /* BaseVC.swift */; };
+		D35F4DF824393FA60001FC88 /* VentilatorControlPanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35F4DF724393FA60001FC88 /* VentilatorControlPanelViewController.swift */; };
+		D35F4DFB243944D50001FC88 /* VentilatorControlPanelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35F4DFA243944D50001FC88 /* VentilatorControlPanelViewModel.swift */; };
+		D35F4DFD243949E80001FC88 /* VentilatorParameterTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35F4DFC243949E80001FC88 /* VentilatorParameterTileView.swift */; };
+		D35F4DFF24395A310001FC88 /* VentilatorParameterTileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D35F4DFE24395A310001FC88 /* VentilatorParameterTileView.xib */; };
+		D35F4E01243971BC0001FC88 /* VentilatorStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35F4E00243971BC0001FC88 /* VentilatorStatusView.swift */; };
+		D35F4E07243972000001FC88 /* VentilatorStatusView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D35F4E06243972000001FC88 /* VentilatorStatusView.xib */; };
+		D35F4E0924398B940001FC88 /* UpdateVentilatorParametersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35F4E0824398B940001FC88 /* UpdateVentilatorParametersViewController.swift */; };
+		D35F4E0B24398D2C0001FC88 /* ParameterFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35F4E0A24398D2C0001FC88 /* ParameterFieldView.swift */; };
+		D35F4E0D24398D560001FC88 /* ParameterFieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D35F4E0C24398D560001FC88 /* ParameterFieldView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +48,18 @@
 		BA5DEB6424374C9F006A6BB8 /* VentivaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VentivaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA5DEB6824374C9F006A6BB8 /* VentivaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VentivaderTests.swift; sourceTree = "<group>"; };
 		BA5DEB6A24374C9F006A6BB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D32627E7243A385C00CB212A /* VentilatorParametersManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VentilatorParametersManager.swift; sourceTree = "<group>"; };
+		D32627E9243A3C3800CB212A /* UpdateVentilatorParametersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateVentilatorParametersViewModel.swift; sourceTree = "<group>"; };
+		D32627EB243A468400CB212A /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
+		D35F4DF724393FA60001FC88 /* VentilatorControlPanelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VentilatorControlPanelViewController.swift; sourceTree = "<group>"; };
+		D35F4DFA243944D50001FC88 /* VentilatorControlPanelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VentilatorControlPanelViewModel.swift; sourceTree = "<group>"; };
+		D35F4DFC243949E80001FC88 /* VentilatorParameterTileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VentilatorParameterTileView.swift; path = Ventivader/ViewModels/VentilatorParameterTileView.swift; sourceTree = SOURCE_ROOT; };
+		D35F4DFE24395A310001FC88 /* VentilatorParameterTileView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = VentilatorParameterTileView.xib; path = Ventivader/ViewModels/VentilatorParameterTileView.xib; sourceTree = SOURCE_ROOT; };
+		D35F4E00243971BC0001FC88 /* VentilatorStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VentilatorStatusView.swift; path = Ventivader/ViewModels/VentilatorStatusView.swift; sourceTree = SOURCE_ROOT; };
+		D35F4E06243972000001FC88 /* VentilatorStatusView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = VentilatorStatusView.xib; path = Ventivader/ViewModels/VentilatorStatusView.xib; sourceTree = SOURCE_ROOT; };
+		D35F4E0824398B940001FC88 /* UpdateVentilatorParametersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateVentilatorParametersViewController.swift; sourceTree = "<group>"; };
+		D35F4E0A24398D2C0001FC88 /* ParameterFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ParameterFieldView.swift; path = Ventivader/ViewModels/ParameterFieldView.swift; sourceTree = SOURCE_ROOT; };
+		D35F4E0C24398D560001FC88 /* ParameterFieldView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ParameterFieldView.xib; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +106,7 @@
 				BA5DEB7B24375EEC006A6BB8 /* Resources */,
 				BA5DEB7A24375ED5006A6BB8 /* Storyboards */,
 				BA5DEB7624375E6D006A6BB8 /* Managers */,
+				D35F4DF9243944830001FC88 /* ViewModels */,
 				BA5DEB7724375E77006A6BB8 /* Services */,
 				BA5DEB7424375E49006A6BB8 /* ViewControllers */,
 				BA5DEB7324375E39006A6BB8 /* Views */,
@@ -102,6 +127,12 @@
 		BA5DEB7324375E39006A6BB8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D35F4DFC243949E80001FC88 /* VentilatorParameterTileView.swift */,
+				D35F4DFE24395A310001FC88 /* VentilatorParameterTileView.xib */,
+				D35F4E00243971BC0001FC88 /* VentilatorStatusView.swift */,
+				D35F4E06243972000001FC88 /* VentilatorStatusView.xib */,
+				D35F4E0A24398D2C0001FC88 /* ParameterFieldView.swift */,
+				D35F4E0C24398D560001FC88 /* ParameterFieldView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -110,6 +141,9 @@
 			isa = PBXGroup;
 			children = (
 				BA5DEB5524374C9C006A6BB8 /* VentivaderViewController.swift */,
+				D35F4DF724393FA60001FC88 /* VentilatorControlPanelViewController.swift */,
+				D35F4E0824398B940001FC88 /* UpdateVentilatorParametersViewController.swift */,
+				D32627EB243A468400CB212A /* BaseVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -117,6 +151,7 @@
 		BA5DEB7624375E6D006A6BB8 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				D32627E7243A385C00CB212A /* VentilatorParametersManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -150,6 +185,15 @@
 				BA5DEB5A24374C9F006A6BB8 /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		D35F4DF9243944830001FC88 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				D35F4DFA243944D50001FC88 /* VentilatorControlPanelViewModel.swift */,
+				D32627E9243A3C3800CB212A /* UpdateVentilatorParametersViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,7 +278,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA5DEB5E24374C9F006A6BB8 /* LaunchScreen.storyboard in Resources */,
+				D35F4E0D24398D560001FC88 /* ParameterFieldView.xib in Resources */,
 				BA5DEB5B24374C9F006A6BB8 /* Assets.xcassets in Resources */,
+				D35F4DFF24395A310001FC88 /* VentilatorParameterTileView.xib in Resources */,
+				D35F4E07243972000001FC88 /* VentilatorStatusView.xib in Resources */,
 				BA5DEB5924374C9C006A6BB8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -253,8 +300,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D35F4DF824393FA60001FC88 /* VentilatorControlPanelViewController.swift in Sources */,
+				D32627EC243A468400CB212A /* BaseVC.swift in Sources */,
+				D35F4E0924398B940001FC88 /* UpdateVentilatorParametersViewController.swift in Sources */,
+				D35F4DFB243944D50001FC88 /* VentilatorControlPanelViewModel.swift in Sources */,
+				D35F4E0B24398D2C0001FC88 /* ParameterFieldView.swift in Sources */,
 				BA5DEB5624374C9C006A6BB8 /* VentivaderViewController.swift in Sources */,
+				D32627EA243A3C3800CB212A /* UpdateVentilatorParametersViewModel.swift in Sources */,
+				D32627E8243A385C00CB212A /* VentilatorParametersManager.swift in Sources */,
 				BA5DEB5424374C9C006A6BB8 /* AppDelegate.swift in Sources */,
+				D35F4E01243971BC0001FC88 /* VentilatorStatusView.swift in Sources */,
+				D35F4DFD243949E80001FC88 /* VentilatorParameterTileView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
