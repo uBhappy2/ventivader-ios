@@ -29,6 +29,7 @@ class VentivaderViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        overrideUserInterfaceStyle = .light
         
         centralManager = CBCentralManager(delegate: self, queue: nil)
         
@@ -38,6 +39,9 @@ class VentivaderViewController: UIViewController {
         self.exhaleTimeInSecs.delegate = self
         self.exhaleHoldInSecs.delegate = self
         self.ventilationCycles.delegate = self
+        
+        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing))
+        view.addGestureRecognizer(tap)
         
     }
 
@@ -105,7 +109,7 @@ class VentivaderViewController: UIViewController {
             return
         }
         
-        guard let dataValue = Data(base64Encoded: stringToWrite) else {
+        guard let dataValue = stringToWrite.data(using: .utf8) else {
             print("ERROR: Cannot create data from inputs")
             return
         }
@@ -119,6 +123,7 @@ class VentivaderViewController: UIViewController {
 
 extension VentivaderViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
         return true
     }
 }

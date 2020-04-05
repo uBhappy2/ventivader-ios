@@ -34,9 +34,12 @@ extension VentivaderViewController: CBCentralManagerDelegate {
     }
     
     func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
-        print("Peripheral Found!")
+        
+        print("Peripheral Found!: \(peripheral)")
         centralManager?.stopScan()
+        connectedPeripheral = peripheral
         centralManager?.connect(peripheral, options: nil)
+
     }
     
     func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {

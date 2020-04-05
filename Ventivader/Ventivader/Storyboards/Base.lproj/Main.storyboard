@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LRv-oC-hH5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LRv-oC-hH5">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,13 +19,13 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="705"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ventivader" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AyU-Ec-RUQ">
-                                        <rect key="frame" x="91.5" y="40" width="231.5" height="57.5"/>
+                                        <rect key="frame" x="91.5" y="32" width="231.5" height="57.5"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="48"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="uaH-R5-MXg">
-                                        <rect key="frame" x="57" y="133.5" width="300" height="250"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="uaH-R5-MXg" userLabel="Inputs Stack View">
+                                        <rect key="frame" x="57" y="113.5" width="300" height="218"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="rGC-PM-v8b">
                                                 <rect key="frame" x="0.0" y="0.0" width="300" height="34"/>
@@ -51,7 +50,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Sqy-II-7f1">
-                                                <rect key="frame" x="0.0" y="54" width="300" height="34"/>
+                                                <rect key="frame" x="0.0" y="46" width="300" height="34"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Inhale hold (secs)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="52n-7T-T5I">
                                                         <rect key="frame" x="0.0" y="0.0" width="143.5" height="34"/>
@@ -70,7 +69,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8BM-FM-T3j">
-                                                <rect key="frame" x="0.0" y="108" width="300" height="34"/>
+                                                <rect key="frame" x="0.0" y="92" width="300" height="34"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exhale time (secs)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v9x-DK-Bhm">
                                                         <rect key="frame" x="0.0" y="0.0" width="148" height="34"/>
@@ -89,7 +88,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Zo5-Ag-FNT">
-                                                <rect key="frame" x="0.0" y="162" width="300" height="34"/>
+                                                <rect key="frame" x="0.0" y="138" width="300" height="34"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exhale hold (secs)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="egQ-4t-rHb">
                                                         <rect key="frame" x="0.0" y="0.0" width="148" height="34"/>
@@ -108,7 +107,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="yZ0-RE-DEO">
-                                                <rect key="frame" x="0.0" y="216" width="300" height="34"/>
+                                                <rect key="frame" x="0.0" y="184" width="300" height="34"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ventilation cycles (#)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P2P-5o-Q9C">
                                                         <rect key="frame" x="0.0" y="0.0" width="169.5" height="34"/>
@@ -131,7 +130,7 @@
                                             <constraint firstAttribute="width" constant="300" id="pjF-4c-WHe"/>
                                         </constraints>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Ere-KN-nhI">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Ere-KN-nhI" userLabel="Main buttons Stack View">
                                         <rect key="frame" x="29.5" y="601" width="355" height="54"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MjO-Wo-X0m">
@@ -162,28 +161,28 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="43" translatesAutoresizingMaskIntoConstraints="NO" id="AmP-so-KIH">
-                                        <rect key="frame" x="47.5" y="419.5" width="319" height="48"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="43" translatesAutoresizingMaskIntoConstraints="NO" id="AmP-so-KIH" userLabel="Debug buttons Stack View">
+                                        <rect key="frame" x="81.5" y="355.5" width="251" height="38"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bRi-Sp-Et8">
-                                                <rect key="frame" x="0.0" y="0.0" width="81" height="48"/>
-                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="57" height="38"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
                                                 <state key="normal" title="Inhale"/>
                                                 <connections>
                                                     <action selector="inhale:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Be6-LF-cHg"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3zf-WL-vou">
-                                                <rect key="frame" x="124" y="0.0" width="89" height="48"/>
-                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                                <rect key="frame" x="100" y="0.0" width="63" height="38"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
                                                 <state key="normal" title="Exhale"/>
                                                 <connections>
                                                     <action selector="exhale:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Nc-tf-ZgO"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3mh-Qa-0FD">
-                                                <rect key="frame" x="256" y="0.0" width="63" height="48"/>
-                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                                <rect key="frame" x="206" y="0.0" width="45" height="38"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
                                                 <state key="normal" title="BPM"/>
                                                 <connections>
                                                     <action selector="bpm:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rx2-Te-7mC"/>
@@ -194,14 +193,14 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.45085787770000002" green="0.98829740290000001" blue="0.83763033149999999" alpha="0.12583892617449666" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="uaH-R5-MXg" firstAttribute="top" secondItem="AyU-Ec-RUQ" secondAttribute="bottom" constant="36" id="8dm-3q-QxM"/>
+                                    <constraint firstItem="uaH-R5-MXg" firstAttribute="top" secondItem="AyU-Ec-RUQ" secondAttribute="bottom" constant="24" id="8dm-3q-QxM"/>
                                     <constraint firstItem="AyU-Ec-RUQ" firstAttribute="centerX" secondItem="kV7-ly-hsb" secondAttribute="centerX" id="ETf-gI-4DC"/>
-                                    <constraint firstItem="AyU-Ec-RUQ" firstAttribute="top" secondItem="kV7-ly-hsb" secondAttribute="top" constant="40" id="d8F-qF-sBr"/>
+                                    <constraint firstItem="AyU-Ec-RUQ" firstAttribute="top" secondItem="kV7-ly-hsb" secondAttribute="top" constant="32" id="d8F-qF-sBr"/>
                                     <constraint firstItem="uaH-R5-MXg" firstAttribute="centerX" secondItem="kV7-ly-hsb" secondAttribute="centerX" id="ghq-kT-7WB"/>
                                     <constraint firstAttribute="bottom" secondItem="Ere-KN-nhI" secondAttribute="bottom" constant="50" id="hDR-im-gLs"/>
                                     <constraint firstItem="Ere-KN-nhI" firstAttribute="centerX" secondItem="kV7-ly-hsb" secondAttribute="centerX" id="qhx-eg-b8W"/>
                                     <constraint firstItem="AmP-so-KIH" firstAttribute="centerX" secondItem="kV7-ly-hsb" secondAttribute="centerX" id="rzf-1P-iuq"/>
-                                    <constraint firstItem="AmP-so-KIH" firstAttribute="top" secondItem="uaH-R5-MXg" secondAttribute="bottom" constant="36" id="zC3-E6-ai4"/>
+                                    <constraint firstItem="AmP-so-KIH" firstAttribute="top" secondItem="uaH-R5-MXg" secondAttribute="bottom" constant="24" id="zC3-E6-ai4"/>
                                 </constraints>
                             </view>
                         </subviews>
