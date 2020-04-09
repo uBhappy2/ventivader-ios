@@ -10,8 +10,8 @@ import Foundation
 import CoreBluetooth
 
 struct BLEProperties {
-    static let serviceUUID: CBUUID = CBUUID(string: "2E70DF6A-7FAB-44A4-9B20-C12F5D1E726C")
-    static let solenoidParamsUUID: CBUUID = CBUUID(string: "2E70DF6B-7FAB-44A4-9B20-C12F5D1E726C")
+    static let serviceUUID: CBUUID = CBUUID(string: "6e400001-b5a3-f393-e0a9-e50e24dcca9e")
+    static let solenoidParamsUUID: CBUUID = CBUUID(string: "6e400002-b5a3-f393-e0a9-e50e24dcca9e")
 }
 
 extension VentivaderViewController: CBCentralManagerDelegate {

@@ -12,10 +12,10 @@ import UIKit
 class VentivaderViewController: UIViewController {
 
     @IBOutlet weak var inhaleTimeInSecs: UITextField!
-    @IBOutlet weak var inhaleHoldInSecs: UITextField!
-    @IBOutlet weak var exhaleTimeInSecs: UITextField!
-    @IBOutlet weak var exhaleHoldInSecs: UITextField!
-    @IBOutlet weak var ventilationCycles: UITextField!
+    @IBOutlet weak var IERatio: UITextField!
+    @IBOutlet weak var bpm: UITextField!
+    @IBOutlet weak var tidalVolumeInML: UITextField!
+    @IBOutlet weak var ventilationTimeInMins: UITextField!
     
     var centralManager: CBCentralManager?
     var connectedPeripheral: CBPeripheral?
@@ -35,10 +35,10 @@ class VentivaderViewController: UIViewController {
         
         // Do any additional setup after loading the view, typically from a nib.
         self.inhaleTimeInSecs.delegate = self
-        self.inhaleHoldInSecs.delegate = self
-        self.exhaleTimeInSecs.delegate = self
-        self.exhaleHoldInSecs.delegate = self
-        self.ventilationCycles.delegate = self
+        self.IERatio.delegate = self
+        self.bpm.delegate = self
+        self.tidalVolumeInML.delegate = self
+        self.ventilationTimeInMins.delegate = self
         
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing))
         view.addGestureRecognizer(tap)
@@ -65,39 +65,38 @@ class VentivaderViewController: UIViewController {
         }
     }
     
-    @IBAction func handleInhaleHoldTime(_ sender: UITextField) {
-        if let inhaleHoldTime = sender.text {
-            print("Handle inhale Hold time: \(inhaleHoldTime) secs ")
+    @IBAction func handleIERatio(_ sender: UITextField) {
+        if let ieRatio = sender.text {
+            print("Handle inhale/exhale ratio: \(ieRatio)")
         }
     }
     
     
-    @IBAction func handleExhaleTime(_ sender: UITextField) {
-        if let exhaleTime = sender.text {
-            print("Handle exhale time: \(exhaleTime) secs")
+    @IBAction func handleBPM(_ sender: UITextField) {
+        if let bpm = sender.text {
+            print("Handle breaths per min: \(bpm)")
         }
     }
     
     
-    @IBAction func handleExhaleHoldTime(_ sender: UITextField) {
-        if let exhaleHoldTime = sender.text {
-            print("Handle exhale hold time \(exhaleHoldTime) secs")
+    @IBAction func handleTidalVolume(_ sender: UITextField) {
+        if let tidalVolume = sender.text {
+            print("Handle tidal Volume \(tidalVolume) mL")
         }
     }
-    
-    
-    @IBAction func handleVentilationCycles(_ sender: UITextField) {
-        if let ventilationCyclesString = sender.text {
-            print("Handle ventilation cycles: \(ventilationCyclesString) ")
+        
+    @IBAction func handleVentilationTime(_ sender: UITextField) {
+        if let ventilationTimeInMins = sender.text {
+            print("Handle ventilation cycles: \(ventilationTimeInMins) mins")
         }
     }
     
     @IBAction func sendVentilationProperties(_ sender: UIButton) {
         guard let p1 = inhaleTimeInSecs.text,
-            let p2 = inhaleHoldInSecs.text,
-            let p3 = exhaleTimeInSecs.text,
-            let p4 = exhaleHoldInSecs.text,
-            let p5 = ventilationCycles.text else {
+            let p2 = IERatio.text,
+            let p3 = bpm.text,
+            let p4 = tidalVolumeInML.text,
+            let p5 = ventilationTimeInMins.text else {
                 print("ERROR: Properties incomplete!!!!")
                 return
         }
