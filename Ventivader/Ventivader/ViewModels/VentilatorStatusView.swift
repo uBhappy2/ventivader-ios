@@ -47,5 +47,14 @@ final class VentilatorStatusView: UIView {
         contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
 
         statusSignalView.layer.cornerRadius = statusSignalView.frame.width/2
+        
+        
+        applyColors()
+    }
+
+    private func applyColors() {
+        contentView.backgroundColor = ColorPallete.backgroundColor
+        statusLabel.textColor = ColorPallete.highlightColor
+        actionButton.setTitleColor(ColorPallete.secondaryHighlightColor, for: .normal)
     }
 }

@@ -8,6 +8,7 @@ target 'Ventivader' do
   # Pods for Ventivader
   pod 'IQKeyboardManagerSwift'
   pod 'SwiftGifOrigin'
+  pod 'Charts', :git => 'https://github.com/danielgindi/Charts.git', :branch => 'master'
 
   target 'VentivaderTests' do
     inherit! :search_paths

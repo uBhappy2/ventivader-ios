@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "11BA7AAF1AE65A2328940B6070CBC56B"
+               BlueprintIdentifier = "97D74DC976982DB94B33A617313D74FB"
                BuildableName = "Pods_Ventivader.framework"
                BlueprintName = "Pods-Ventivader"
                ReferencedContainer = "container:Pods.xcodeproj">

@@ -1,8 +1,12 @@
 PODS:
+  - Charts (3.4.0):
+    - Charts/Core (= 3.4.0)
+  - Charts/Core (3.4.0)
   - IQKeyboardManagerSwift (6.1.1)
   - SwiftGifOrigin (1.6.1)
 
 DEPENDENCIES:
+  - Charts (from `https://github.com/danielgindi/Charts.git`, branch `master`)
   - IQKeyboardManagerSwift
   - SwiftGifOrigin
 
@@ -11,10 +15,21 @@ SPEC REPOS:
     - IQKeyboardManagerSwift
     - SwiftGifOrigin
 
+EXTERNAL SOURCES:
+  Charts:
+    :branch: master
+    :git: https://github.com/danielgindi/Charts.git
+
+CHECKOUT OPTIONS:
+  Charts:
+    :commit: 56effcf413ef25144fa89d8483613a0f10c7ab23
+    :git: https://github.com/danielgindi/Charts.git
+
 SPEC CHECKSUMS:
+  Charts: 84607bebc685c6ff67a340158e084b317645a9cb
   IQKeyboardManagerSwift: 977affaeb4d6e971975c7790a6850f31d38f1207
   SwiftGifOrigin: d6679d3ebe9df2e049a84bc52582635107b581f6
 
-PODFILE CHECKSUM: d844467faa84904f9fe44478ad261f566f68bd2d
+PODFILE CHECKSUM: 41bf50891b32152339fc1f43da76c23c1dee009a
 
 COCOAPODS: 1.5.2

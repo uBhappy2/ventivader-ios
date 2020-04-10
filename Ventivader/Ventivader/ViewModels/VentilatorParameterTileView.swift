@@ -9,9 +9,13 @@
 import UIKit
 
 final class VentilatorParameterTileView: UIView {
+
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var unitLabel: UILabel!
     @IBOutlet weak var valueLabel: UILabel!
-    @IBOutlet weak var unitsLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var leftFooterLabel: UILabel!
+    @IBOutlet weak var rightFooterLabel: UILabel!
+    @IBOutlet weak var headerView: UIView!
     
     class func instanceFromNib() -> VentilatorParameterTileView {
         return UINib(nibName: "VentilatorParameterTileView", bundle: nil).instantiate(withOwner: self, options: nil)[0] as! VentilatorParameterTileView
@@ -23,11 +27,34 @@ final class VentilatorParameterTileView: UIView {
         super.init(coder: coder)
     }
     
-    func setUp(ventilatorParameter: VentilatorParameterModel ) {
+    func setUp(ventilatorParameter: VentilatorParameterModel) {
+        self.ventilatorParameter = ventilatorParameter
         DispatchQueue.main.async { [weak self] in
-            self?.valueLabel.text = ventilatorParameter.currentValue
-            self?.unitsLabel.text = ventilatorParameter.units?.symbol
-            self?.descriptionLabel.text = ventilatorParameter.description
+            self?.titleLabel.text = ventilatorParameter.title
+            self?.unitLabel.text = ventilatorParameter.units
+            self?.valueLabel.text = ventilatorParameter.value
+            self?.rightFooterLabel.text = ventilatorParameter.rightFooter
+            self?.leftFooterLabel.text = ventilatorParameter.leftFooter
+            
+            let labels: [UILabel?] = [self?.unitLabel, self?.valueLabel, self?.rightFooterLabel, self?.leftFooterLabel]
+            labels.forEach { label in
+                label?.isHidden = label?.text == nil
+            }
+        }
+        setupColors()
+    }
+    
+    private func setupColors() {
+        DispatchQueue.main.async { [weak self] in
+            self?.backgroundColor = ColorPallete.secondaryBackgroundColor
+            self?.unitLabel.textColor = ColorPallete.secondaryHighlightColor
+            self?.valueLabel.textColor = ColorPallete.highlightColor
+            self?.leftFooterLabel.textColor = ColorPallete.secondaryHighlightColor
+            self?.rightFooterLabel.textColor = ColorPallete.secondaryHighlightColor
+            
+            let highlightHeader = self?.ventilatorParameter?.headerHighlight == true
+            self?.headerView.backgroundColor =  highlightHeader ? ColorPallete.outstandingBackground : ColorPallete.secondaryBackgroundColor
+            self?.titleLabel.textColor =  highlightHeader ? ColorPallete.secondaryBackgroundColor : ColorPallete.highlightColor
         }
     }
 }

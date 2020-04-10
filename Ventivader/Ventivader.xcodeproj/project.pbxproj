@@ -16,17 +16,16 @@
 		BA5DEB5E24374C9F006A6BB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA5DEB5C24374C9F006A6BB8 /* LaunchScreen.storyboard */; };
 		BA5DEB6924374C9F006A6BB8 /* VentivaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5DEB6824374C9F006A6BB8 /* VentivaderTests.swift */; };
 		D32627E8243A385C00CB212A /* VentilatorParametersManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32627E7243A385C00CB212A /* VentilatorParametersManager.swift */; };
-		D32627EA243A3C3800CB212A /* UpdateVentilatorParametersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32627E9243A3C3800CB212A /* UpdateVentilatorParametersViewModel.swift */; };
 		D32627EC243A468400CB212A /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32627EB243A468400CB212A /* BaseVC.swift */; };
+		D34430422440E8260087EA9B /* LiveDataChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34430412440E8260087EA9B /* LiveDataChartViewController.swift */; };
+		D34430482440F94B0087EA9B /* ColorPallete.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34430472440F94B0087EA9B /* ColorPallete.swift */; };
+		D344304C24412BB90087EA9B /* LiveDataChartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D344304B24412BB90087EA9B /* LiveDataChartViewModel.swift */; };
 		D35F4DF824393FA60001FC88 /* VentilatorControlPanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35F4DF724393FA60001FC88 /* VentilatorControlPanelViewController.swift */; };
 		D35F4DFB243944D50001FC88 /* VentilatorControlPanelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35F4DFA243944D50001FC88 /* VentilatorControlPanelViewModel.swift */; };
 		D35F4DFD243949E80001FC88 /* VentilatorParameterTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35F4DFC243949E80001FC88 /* VentilatorParameterTileView.swift */; };
 		D35F4DFF24395A310001FC88 /* VentilatorParameterTileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D35F4DFE24395A310001FC88 /* VentilatorParameterTileView.xib */; };
 		D35F4E01243971BC0001FC88 /* VentilatorStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35F4E00243971BC0001FC88 /* VentilatorStatusView.swift */; };
 		D35F4E07243972000001FC88 /* VentilatorStatusView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D35F4E06243972000001FC88 /* VentilatorStatusView.xib */; };
-		D35F4E0924398B940001FC88 /* UpdateVentilatorParametersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35F4E0824398B940001FC88 /* UpdateVentilatorParametersViewController.swift */; };
-		D35F4E0B24398D2C0001FC88 /* ParameterFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35F4E0A24398D2C0001FC88 /* ParameterFieldView.swift */; };
-		D35F4E0D24398D560001FC88 /* ParameterFieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D35F4E0C24398D560001FC88 /* ParameterFieldView.xib */; };
 		D3B5131C243A7EBB00117C2C /* ConnectingBLEViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B5131B243A7EBB00117C2C /* ConnectingBLEViewController.swift */; };
 		D3B5131F243A815A00117C2C /* bleConnectingAnimation.gif in Resources */ = {isa = PBXBuildFile; fileRef = D3B5131E243A815A00117C2C /* bleConnectingAnimation.gif */; };
 /* End PBXBuildFile section */
@@ -57,17 +56,16 @@
 		BA5DEB6824374C9F006A6BB8 /* VentivaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VentivaderTests.swift; sourceTree = "<group>"; };
 		BA5DEB6A24374C9F006A6BB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D32627E7243A385C00CB212A /* VentilatorParametersManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VentilatorParametersManager.swift; sourceTree = "<group>"; };
-		D32627E9243A3C3800CB212A /* UpdateVentilatorParametersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateVentilatorParametersViewModel.swift; sourceTree = "<group>"; };
 		D32627EB243A468400CB212A /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
+		D34430412440E8260087EA9B /* LiveDataChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveDataChartViewController.swift; sourceTree = "<group>"; };
+		D34430472440F94B0087EA9B /* ColorPallete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPallete.swift; sourceTree = "<group>"; };
+		D344304B24412BB90087EA9B /* LiveDataChartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveDataChartViewModel.swift; sourceTree = "<group>"; };
 		D35F4DF724393FA60001FC88 /* VentilatorControlPanelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VentilatorControlPanelViewController.swift; sourceTree = "<group>"; };
 		D35F4DFA243944D50001FC88 /* VentilatorControlPanelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VentilatorControlPanelViewModel.swift; sourceTree = "<group>"; };
 		D35F4DFC243949E80001FC88 /* VentilatorParameterTileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VentilatorParameterTileView.swift; path = Ventivader/ViewModels/VentilatorParameterTileView.swift; sourceTree = SOURCE_ROOT; };
 		D35F4DFE24395A310001FC88 /* VentilatorParameterTileView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = VentilatorParameterTileView.xib; path = Ventivader/ViewModels/VentilatorParameterTileView.xib; sourceTree = SOURCE_ROOT; };
 		D35F4E00243971BC0001FC88 /* VentilatorStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VentilatorStatusView.swift; path = Ventivader/ViewModels/VentilatorStatusView.swift; sourceTree = SOURCE_ROOT; };
 		D35F4E06243972000001FC88 /* VentilatorStatusView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = VentilatorStatusView.xib; path = Ventivader/ViewModels/VentilatorStatusView.xib; sourceTree = SOURCE_ROOT; };
-		D35F4E0824398B940001FC88 /* UpdateVentilatorParametersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateVentilatorParametersViewController.swift; sourceTree = "<group>"; };
-		D35F4E0A24398D2C0001FC88 /* ParameterFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ParameterFieldView.swift; path = Ventivader/ViewModels/ParameterFieldView.swift; sourceTree = SOURCE_ROOT; };
-		D35F4E0C24398D560001FC88 /* ParameterFieldView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ParameterFieldView.xib; sourceTree = SOURCE_ROOT; };
 		D3B5131B243A7EBB00117C2C /* ConnectingBLEViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectingBLEViewController.swift; sourceTree = "<group>"; };
 		D3B5131E243A815A00117C2C /* bleConnectingAnimation.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = bleConnectingAnimation.gif; sourceTree = "<group>"; };
 		EE0842B19478DF756AD78A19 /* Pods-VentivaderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VentivaderTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VentivaderTests/Pods-VentivaderTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -167,8 +165,6 @@
 				D35F4DFE24395A310001FC88 /* VentilatorParameterTileView.xib */,
 				D35F4E00243971BC0001FC88 /* VentilatorStatusView.swift */,
 				D35F4E06243972000001FC88 /* VentilatorStatusView.xib */,
-				D35F4E0A24398D2C0001FC88 /* ParameterFieldView.swift */,
-				D35F4E0C24398D560001FC88 /* ParameterFieldView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -178,9 +174,9 @@
 			children = (
 				BA5DEB5524374C9C006A6BB8 /* VentivaderViewController.swift */,
 				D35F4DF724393FA60001FC88 /* VentilatorControlPanelViewController.swift */,
-				D35F4E0824398B940001FC88 /* UpdateVentilatorParametersViewController.swift */,
 				D32627EB243A468400CB212A /* BaseVC.swift */,
 				D3B5131B243A7EBB00117C2C /* ConnectingBLEViewController.swift */,
+				D34430412440E8260087EA9B /* LiveDataChartViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -203,6 +199,7 @@
 		BA5DEB7924375E98006A6BB8 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				D34430472440F94B0087EA9B /* ColorPallete.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -229,7 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				D35F4DFA243944D50001FC88 /* VentilatorControlPanelViewModel.swift */,
-				D32627E9243A3C3800CB212A /* UpdateVentilatorParametersViewModel.swift */,
+				D344304B24412BB90087EA9B /* LiveDataChartViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -327,7 +324,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA5DEB5E24374C9F006A6BB8 /* LaunchScreen.storyboard in Resources */,
-				D35F4E0D24398D560001FC88 /* ParameterFieldView.xib in Resources */,
 				BA5DEB5B24374C9F006A6BB8 /* Assets.xcassets in Resources */,
 				D35F4DFF24395A310001FC88 /* VentilatorParameterTileView.xib in Resources */,
 				D35F4E07243972000001FC88 /* VentilatorStatusView.xib in Resources */,
@@ -371,11 +367,13 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Ventivader/Pods-Ventivader-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftGifOrigin/SwiftGifOrigin.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftGifOrigin.framework",
 			);
@@ -409,13 +407,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D34430422440E8260087EA9B /* LiveDataChartViewController.swift in Sources */,
 				D35F4DF824393FA60001FC88 /* VentilatorControlPanelViewController.swift in Sources */,
 				D32627EC243A468400CB212A /* BaseVC.swift in Sources */,
-				D35F4E0924398B940001FC88 /* UpdateVentilatorParametersViewController.swift in Sources */,
+				D344304C24412BB90087EA9B /* LiveDataChartViewModel.swift in Sources */,
+				D34430482440F94B0087EA9B /* ColorPallete.swift in Sources */,
 				D35F4DFB243944D50001FC88 /* VentilatorControlPanelViewModel.swift in Sources */,
-				D35F4E0B24398D2C0001FC88 /* ParameterFieldView.swift in Sources */,
 				BA5DEB5624374C9C006A6BB8 /* VentivaderViewController.swift in Sources */,
-				D32627EA243A3C3800CB212A /* UpdateVentilatorParametersViewModel.swift in Sources */,
 				D32627E8243A385C00CB212A /* VentilatorParametersManager.swift in Sources */,
 				BA5DEB5424374C9C006A6BB8 /* AppDelegate.swift in Sources */,
 				D35F4E01243971BC0001FC88 /* VentilatorStatusView.swift in Sources */,

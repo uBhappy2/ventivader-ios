@@ -8,21 +8,6 @@
 
 import Foundation
 
-
-class VentilatorParameterModel {
-    var currentValue: String? = "0"
-    var units: Unit? = nil
-    let description: String
-    let defaultValue: String
-    
-    init(value: String, units: Unit, description: String, defaultValue: String) {
-        self.currentValue = value
-        self.units = units
-        self.description = description
-        self.defaultValue = defaultValue
-    }
-}
-
 final class VentilatorControlPanelViewModel {
     
     private let ventilatoParamatersManager: VentilatorParametersManager
