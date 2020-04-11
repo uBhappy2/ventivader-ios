@@ -37,7 +37,7 @@ final class VentilatorParametersManager {
 
     var ventilatorParameters: [VentilatorParameterModel] = [
         VentilatorParameterModel(title: NSLocalizedString("CONTROL MODE", comment: "Control Panel tile title"),
-                                 value: NSLocalizedString("PC-SIMV", comment: "Control Panel tile value"),
+                                 value: NSLocalizedString("AC", comment: "Control Panel tile value"),
                                  headerHighlight: true),
         VentilatorParameterModel(title: NSLocalizedString("PATIENT", comment: "Control Panel tile title"),
                                  value: "Fake Name",
