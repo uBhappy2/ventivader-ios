@@ -30,6 +30,7 @@ final class VentilatorParameterTileView: UIView {
     func setUp(ventilatorParameter: VentilatorParameterModel) {
         self.ventilatorParameter = ventilatorParameter
         DispatchQueue.main.async { [weak self] in
+            self?.titleLabel.updateFontOnly(name: FontsVentivader.titleFont)
             self?.titleLabel.text = ventilatorParameter.title
             self?.unitLabel.text = ventilatorParameter.units
             self?.valueLabel.text = ventilatorParameter.value

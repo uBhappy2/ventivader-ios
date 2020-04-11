@@ -231,17 +231,17 @@
             <objects>
                 <viewController id="wwT-X7-b2W" customClass="VentilatorControlPanelViewController" customModule="Ventivader" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jgo-fP-Mts">
-                        <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2n5-B8-5xZ" userLabel="Title Stack View">
-                                <rect key="frame" x="0.0" y="50" width="810" height="49"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="36.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ITi-IX-rh6">
-                                        <rect key="frame" x="0.0" y="0.0" width="810" height="49"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="36.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ventivader Control Panel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="byz-lf-Fc5">
-                                                <rect key="frame" x="237" y="8" width="336.5" height="33.5"/>
+                                                <rect key="frame" x="56.5" y="3" width="301.5" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="28"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -259,39 +259,40 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="1D4-lw-52E" userLabel="Status Stack View">
-                                <rect key="frame" x="0.0" y="99" width="810" height="98"/>
+                                <rect key="frame" x="0.0" y="124.5" width="414" height="72.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4vK-8K-2ed" customClass="VentilatorStatusView" customModule="Ventivader" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="405" height="98"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="207" height="72.5"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OLj-8s-BIR" customClass="VentilatorStatusView" customModule="Ventivader" customModuleProvider="target">
-                                        <rect key="frame" x="405" y="0.0" width="405" height="98"/>
+                                        <rect key="frame" x="207" y="0.0" width="207" height="72.5"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="dfJ-F2-oeT">
-                                <rect key="frame" x="0.0" y="687" width="810" height="343"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dfJ-F2-oeT">
+                                <rect key="frame" x="0.0" y="559.5" width="414" height="253.5"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="cMQ-oE-Sog">
-                                <rect key="frame" x="0.0" y="197" width="810" height="490"/>
+                                <rect key="frame" x="0.0" y="197" width="414" height="362.5"/>
                                 <subviews>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1V1-CL-Jdk">
-                                        <rect key="frame" x="0.0" y="0.0" width="810" height="163.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="120.5"/>
                                         <connections>
                                             <segue destination="fCZ-Xq-OfM" kind="embed" identifier="pressureChartSegue" id="p8z-E0-L50"/>
                                         </connections>
                                     </containerView>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mcy-mW-iPz">
-                                        <rect key="frame" x="0.0" y="163.5" width="810" height="163"/>
+                                        <rect key="frame" x="0.0" y="120.5" width="414" height="121"/>
                                         <connections>
                                             <segue destination="fCZ-Xq-OfM" kind="embed" identifier="volumeChartSegue" id="gmI-hv-IkZ"/>
                                         </connections>
                                     </containerView>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ipi-kD-XGo">
-                                        <rect key="frame" x="0.0" y="326.5" width="810" height="163.5"/>
+                                        <rect key="frame" x="0.0" y="241.5" width="414" height="121"/>
                                         <connections>
                                             <segue destination="fCZ-Xq-OfM" kind="embed" identifier="flowChartSegue" id="HWF-Y3-dkI"/>
                                         </connections>
@@ -303,7 +304,6 @@
                         <constraints>
                             <constraint firstItem="1D4-lw-52E" firstAttribute="top" secondItem="2n5-B8-5xZ" secondAttribute="bottom" id="2HR-LK-aoe"/>
                             <constraint firstItem="1D4-lw-52E" firstAttribute="leading" secondItem="eNv-po-qrn" secondAttribute="leading" id="4og-UN-jbw"/>
-                            <constraint firstItem="dfJ-F2-oeT" firstAttribute="height" secondItem="jgo-fP-Mts" secondAttribute="height" multiplier="0.317593" id="5Qd-Wi-8mZ"/>
                             <constraint firstItem="cMQ-oE-Sog" firstAttribute="height" secondItem="eNv-po-qrn" secondAttribute="height" multiplier="0.5" id="8wH-Kq-gpV"/>
                             <constraint firstItem="2n5-B8-5xZ" firstAttribute="leading" secondItem="eNv-po-qrn" secondAttribute="leading" id="AUm-1n-er3"/>
                             <constraint firstItem="dfJ-F2-oeT" firstAttribute="leading" secondItem="eNv-po-qrn" secondAttribute="leading" id="P3S-Eh-Hs6"/>
@@ -324,7 +324,6 @@
                     <navigationItem key="navigationItem" id="tIE-zB-3O7"/>
                     <connections>
                         <outlet property="bleConnectionStatusView" destination="OLj-8s-BIR" id="uqb-5L-9ot"/>
-                        <outlet property="controlPanelParameterHeightContraint" destination="5Qd-Wi-8mZ" id="S5o-fh-Uji"/>
                         <outlet property="controlPanelStackView" destination="dfJ-F2-oeT" id="L1L-gw-13g"/>
                         <outlet property="plotsStackView" destination="cMQ-oE-Sog" id="YZf-xh-KVJ"/>
                         <outlet property="titleView" destination="ITi-IX-rh6" id="BHf-Ne-4XL"/>
@@ -384,7 +383,7 @@
         <!--Profile View Controller-->
         <scene sceneID="Ta6-S9-AYI">
             <objects>
-                <viewController id="6HO-67-M75" userLabel="Profile View Controller" sceneMemberID="viewController">
+                <viewController id="6HO-67-M75" userLabel="Profile View Controller" customClass="ProfileVC" customModule="Ventivader" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DSH-Vj-25y">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -494,7 +493,7 @@
                     <tabBarItem key="tabBarItem" title="Item" id="Vav-JA-iHN"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JQO-sn-M9X">
-                        <rect key="frame" x="0.0" y="0.0" width="810" height="50"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -511,17 +510,20 @@
             <objects>
                 <viewController id="1cS-VV-hwu" customClass="ConnectingBLEViewController" customModule="Ventivader" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2hg-MN-neg">
-                        <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connecting to BLE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tj4-Hq-TOg">
-                                <rect key="frame" x="316.5" y="527" width="177" height="26.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connecting BLE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tj4-Hq-TOg">
+                                <rect key="frame" x="69.5" y="513.5" width="275.5" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="75"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                </variation>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cTx-sm-KKF">
-                                <rect key="frame" x="243" y="139" width="324" height="324"/>
+                                <rect key="frame" x="83" y="201" width="248" height="248.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="cTx-sm-KKF" secondAttribute="height" multiplier="1:1" id="Min-6J-FyB"/>
                                 </constraints>
@@ -529,10 +531,10 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Tj4-Hq-TOg" firstAttribute="centerY" secondItem="2hg-MN-neg" secondAttribute="centerY" id="5uB-Wr-n9B"/>
+                            <constraint firstItem="Tj4-Hq-TOg" firstAttribute="centerY" secondItem="2hg-MN-neg" secondAttribute="centerY" multiplier="1.2" id="5uB-Wr-n9B"/>
                             <constraint firstItem="cTx-sm-KKF" firstAttribute="centerX" secondItem="2hg-MN-neg" secondAttribute="centerX" id="NHV-Z8-Ohe"/>
                             <constraint firstItem="Tj4-Hq-TOg" firstAttribute="centerX" secondItem="2hg-MN-neg" secondAttribute="centerX" id="Qu8-Zr-wbg"/>
-                            <constraint firstItem="cTx-sm-KKF" firstAttribute="width" secondItem="4X4-k3-O2b" secondAttribute="width" multiplier="0.4" id="Z7H-Y9-ewh"/>
+                            <constraint firstItem="cTx-sm-KKF" firstAttribute="width" secondItem="4X4-k3-O2b" secondAttribute="width" multiplier="0.6" id="Z7H-Y9-ewh"/>
                             <constraint firstItem="Tj4-Hq-TOg" firstAttribute="top" secondItem="cTx-sm-KKF" secondAttribute="bottom" constant="64" id="mcI-js-RXk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4X4-k3-O2b"/>
@@ -540,6 +542,7 @@
                     <navigationItem key="navigationItem" id="Aoq-o3-DG6"/>
                     <connections>
                         <outlet property="animationLoadingImage" destination="cTx-sm-KKF" id="WqN-Gm-y2N"/>
+                        <outlet property="headerLabel" destination="Tj4-Hq-TOg" id="nXl-p9-Tdh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9dd-UB-ipV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -551,14 +554,14 @@
             <objects>
                 <viewController id="fCZ-Xq-OfM" customClass="LiveDataChartViewController" customModule="Ventivader" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="S0e-1w-pfo">
-                        <rect key="frame" x="0.0" y="0.0" width="810" height="163.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="121"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KUT-f9-viu">
-                                <rect key="frame" x="4" y="0.0" width="49" height="163.5"/>
+                                <rect key="frame" x="4" y="0.0" width="9.5" height="121"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aqz-6a-vfj">
-                                        <rect key="frame" x="3.5" y="71.5" width="42" height="21"/>
+                                        <rect key="frame" x="-16.5" y="50" width="42" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -571,14 +574,13 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="02r-WM-LxM" customClass="LineChartView" customModule="Charts">
-                                <rect key="frame" x="57" y="8" width="729" height="147.5"/>
+                                <rect key="frame" x="17.5" y="52" width="372.5" height="61"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstAttribute="bottomMargin" secondItem="02r-WM-LxM" secondAttribute="bottom" constant="8" id="Brc-ZW-fDf"/>
-                            <constraint firstItem="02r-WM-LxM" firstAttribute="centerY" secondItem="S0e-1w-pfo" secondAttribute="centerY" id="JXj-Tm-Yw5"/>
                             <constraint firstItem="02r-WM-LxM" firstAttribute="top" secondItem="S0e-1w-pfo" secondAttribute="topMargin" constant="8" id="KAm-RI-jaH"/>
                             <constraint firstItem="02r-WM-LxM" firstAttribute="leading" secondItem="KUT-f9-viu" secondAttribute="trailing" constant="4" id="KJS-sT-RG4"/>
                             <constraint firstAttribute="bottom" secondItem="KUT-f9-viu" secondAttribute="bottom" id="aqK-WY-xdb"/>
@@ -587,6 +589,7 @@
                             <constraint firstItem="KUT-f9-viu" firstAttribute="top" secondItem="S0e-1w-pfo" secondAttribute="top" id="w1i-13-oco"/>
                             <constraint firstAttribute="trailingMargin" secondItem="02r-WM-LxM" secondAttribute="trailing" constant="4" id="wtv-DU-Bu2"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="DFQ-1L-umP"/>
                     </view>
                     <navigationItem key="navigationItem" id="1fG-85-Y8k"/>
                     <connections>

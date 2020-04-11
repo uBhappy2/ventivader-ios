@@ -14,20 +14,10 @@ class VentilatorControlPanelViewController: UIViewController {
     @IBOutlet var ventilatorStatusView: VentilatorStatusView!
     @IBOutlet var bleConnectionStatusView: VentilatorStatusView!
     @IBOutlet var titleView: UIView!
-    @IBOutlet weak var controlPanelParameterHeightContraint: NSLayoutConstraint!
 
     private let viewModel = VentilatorControlPanelViewModel()
     private var ventialorParametersCollectionView: UICollectionView?
 
-    private var parameterCellSize: CGSize {
-        let columns = traitCollection.horizontalSizeClass == .regular ? 3 : 3
-        let rows = traitCollection.horizontalSizeClass == .regular ? 3 : 3
-        let cellWidth = (UIScreen.main.bounds.width - 20) / CGFloat(columns)
-        let viewHeight = UIScreen.main.bounds.height * controlPanelParameterHeightContraint.multiplier
-        let cellHeight = (viewHeight - 20) / CGFloat(rows)
-        return CGSize(width: cellWidth, height: cellHeight)
-    }
-    
     // MARK: - ViewController Life Cycle
     
     override func viewDidLoad() {
@@ -35,6 +25,7 @@ class VentilatorControlPanelViewController: UIViewController {
         setupTitleView()
         setupPlots()
         setupStatusViews()
+        setupParameters()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -51,7 +42,6 @@ class VentilatorControlPanelViewController: UIViewController {
             }
         }))
         
-        setupParameters()
         present(alertController, animated: true, completion: nil)
     }
     
@@ -70,7 +60,6 @@ class VentilatorControlPanelViewController: UIViewController {
             }
         }
     }
-    
     
     // MARK: - Setup Views
     
@@ -100,44 +89,40 @@ class VentilatorControlPanelViewController: UIViewController {
     
     private func setupTitleView() {
         titleView.backgroundColor = ColorPallete.backgroundColor
-        titleView.subviews.forEach { ($0 as? UILabel)?.textColor = ColorPallete.highlightColor }
+        titleView.subviews.forEach {
+            let label = $0 as? UILabel
+            label?.textColor = ColorPallete.highlightColor
+            label?.updateFontOnly(name: FontsVentivader.titleFont)
+        }
     }
     
     private func setupParameters() {
-        let flowLayout: UICollectionViewFlowLayout = {
-            let layout = UICollectionViewFlowLayout()
-            layout.sectionInset = UIEdgeInsets(top: 5, left: 0, bottom: 5, right: 0)
-            layout.itemSize = parameterCellSize
-            return layout
-        }()
+        controlPanelStackView.addBackground(color: ColorPallete.backgroundColor)
+        let parametersViews: [VentilatorParameterTileView] = viewModel.ventilatorParameters.map { parameter in
+            let ventilatorParameterView = VentilatorParameterTileView.instanceFromNib()
+            ventilatorParameterView.setUp(ventilatorParameter: parameter)
+            return ventilatorParameterView
+        }
         
-        ventialorParametersCollectionView = UICollectionView(frame: view.frame,
-                                                             collectionViewLayout: flowLayout)
-        ventialorParametersCollectionView?.dataSource = self
-        ventialorParametersCollectionView?.register(UICollectionViewCell.self,
-                                                    forCellWithReuseIdentifier: "MyCell")
-        ventialorParametersCollectionView?.backgroundColor = ColorPallete.backgroundColor
-        if let collectionView = ventialorParametersCollectionView {
-            controlPanelStackView.addArrangedSubview(collectionView)
+        let topStackView = UIStackView(arrangedSubviews: Array(parametersViews[..<3]))
+        let middleStackView = UIStackView(arrangedSubviews: Array(parametersViews[3..<6]))
+        let bottomStackView = UIStackView(arrangedSubviews: Array(parametersViews[parametersViews.count-3..<parametersViews.count]))
+        
+        [topStackView, middleStackView, bottomStackView].forEach { stackView in
+            controlPanelStackView.addArrangedSubview(stackView)
+            stackView.axis = .horizontal
+            stackView.distribution = .fillEqually
+            stackView.spacing = 8.0
+            stackView.addBackground(color: ColorPallete.backgroundColor)
         }
     }
 }
 
-extension VentilatorControlPanelViewController: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModel.ventilatorParameters.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let myCell = collectionView.dequeueReusableCell(withReuseIdentifier: "MyCell", for: indexPath)
-        
-        let ventilatorParameter = viewModel.ventilatorParameters[indexPath.row]
-        let ventilatorParameterView = VentilatorParameterTileView.instanceFromNib()
-        ventilatorParameterView.setUp(ventilatorParameter: ventilatorParameter)
-        myCell.subviews.forEach { $0.removeFromSuperview() }
-        myCell.addSubview(ventilatorParameterView)
-        ventilatorParameterView.bindFrameToSuperviewBounds()
-        
-        return myCell
+extension UIStackView {
+    func addBackground(color: UIColor) {
+        let subView = UIView(frame: bounds)
+        subView.backgroundColor = color
+        subView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        insertSubview(subView, at: 0)
     }
 }
