@@ -16,7 +16,7 @@ class ConnectingBLEViewController: UIViewController {
         super.viewDidLoad()
         animationLoadingImage.loadGif(name: "bleConnectingAnimation")
         headerLabel.textColor = ColorPallete.secondaryBackgroundColor
-        headerLabel.updateFontOnly(name: FontsVentivader.titleFont)
+        headerLabel.updateFontOnly(name: VentivaderFonts.titleFont)
     }
     
     override func viewWillAppear(_ animated: Bool) {

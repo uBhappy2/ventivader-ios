@@ -1,5 +1,5 @@
 //
-//  FontsVentivader.swift
+//  VentivaderFonts.swift
 //  Ventivader
 //
 //  Created by Al on 11/04/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FontsVentivader {
+class VentivaderFonts {
     static let titleFont = "ONEDAY"
 }
 

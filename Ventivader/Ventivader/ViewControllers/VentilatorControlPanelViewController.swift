@@ -92,7 +92,7 @@ class VentilatorControlPanelViewController: UIViewController {
         titleView.subviews.forEach {
             let label = $0 as? UILabel
             label?.textColor = ColorPallete.highlightColor
-            label?.updateFontOnly(name: FontsVentivader.titleFont)
+            label?.updateFontOnly(name: VentivaderFonts.titleFont)
         }
     }
     
