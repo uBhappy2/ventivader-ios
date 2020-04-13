@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,17 +16,17 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3aE-58-39V">
                     <rect key="frame" x="0.0" y="0.0" width="206" height="39.5"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kmT-SO-7nc">
-                            <rect key="frame" x="4" y="11.5" width="28.5" height="17"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="kmT-SO-7nc">
+                            <rect key="frame" x="4" y="12" width="26.5" height="16"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                             <variation key="heightClass=regular-widthClass=compact">
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                             </variation>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Units" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9pS-au-LJi" userLabel="LabelUnits">
-                            <rect key="frame" x="176.5" y="14" width="25.5" height="12"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" text="Units" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9pS-au-LJi" userLabel="LabelUnits">
+                            <rect key="frame" x="38.5" y="14" width="163.5" height="12"/>
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -40,6 +39,7 @@
                     <constraints>
                         <constraint firstItem="9pS-au-LJi" firstAttribute="centerY" secondItem="3aE-58-39V" secondAttribute="centerY" id="3GA-y5-qqZ"/>
                         <constraint firstItem="kmT-SO-7nc" firstAttribute="leading" secondItem="3aE-58-39V" secondAttribute="leading" constant="4" id="EkG-xg-PGN"/>
+                        <constraint firstItem="9pS-au-LJi" firstAttribute="leading" secondItem="kmT-SO-7nc" secondAttribute="trailing" constant="8" id="Esj-gQ-Alb"/>
                         <constraint firstAttribute="trailing" secondItem="9pS-au-LJi" secondAttribute="trailing" constant="4" id="nxF-wn-FPz"/>
                         <constraint firstItem="kmT-SO-7nc" firstAttribute="centerY" secondItem="3aE-58-39V" secondAttribute="centerY" id="sin-b7-QPi"/>
                     </constraints>

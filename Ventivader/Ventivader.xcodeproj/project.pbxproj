@@ -29,6 +29,8 @@
 		D35F4E07243972000001FC88 /* VentilatorStatusView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D35F4E06243972000001FC88 /* VentilatorStatusView.xib */; };
 		D3B5131C243A7EBB00117C2C /* ConnectingBLEViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B5131B243A7EBB00117C2C /* ConnectingBLEViewController.swift */; };
 		D3B5131F243A815A00117C2C /* bleConnectingAnimation.gif in Resources */ = {isa = PBXBuildFile; fileRef = D3B5131E243A815A00117C2C /* bleConnectingAnimation.gif */; };
+		D3E60017244270D7007C2F8D /* ONEDAY.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D3E60015244270D7007C2F8D /* ONEDAY.ttf */; };
+		D3E6001924427250007C2F8D /* FontsVentivader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E6001824427250007C2F8D /* FontsVentivader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,9 +46,9 @@
 /* Begin PBXFileReference section */
 		2A5044DD0588C01F4A3195C6 /* Pods-Ventivader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ventivader.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ventivader/Pods-Ventivader.release.xcconfig"; sourceTree = "<group>"; };
 		3F3A277B319484632BB8E2A3 /* Pods-Ventivader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ventivader.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Ventivader/Pods-Ventivader.debug.xcconfig"; sourceTree = "<group>"; };
+		4F25632B243988E300CFD2F1 /* VentivaderBluetoothExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VentivaderBluetoothExtensions.swift; sourceTree = "<group>"; };
 		5804350A7961552154493C2D /* Pods_VentivaderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VentivaderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFE1A668078A3C75C484D31D /* Pods_Ventivader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ventivader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4F25632B243988E300CFD2F1 /* VentivaderBluetoothExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VentivaderBluetoothExtensions.swift; sourceTree = "<group>"; };
 		BA5DEB5024374C9C006A6BB8 /* Ventivader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ventivader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA5DEB5324374C9C006A6BB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA5DEB5524374C9C006A6BB8 /* VentivaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VentivaderViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +72,8 @@
 		D35F4E06243972000001FC88 /* VentilatorStatusView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = VentilatorStatusView.xib; path = Ventivader/ViewModels/VentilatorStatusView.xib; sourceTree = SOURCE_ROOT; };
 		D3B5131B243A7EBB00117C2C /* ConnectingBLEViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectingBLEViewController.swift; sourceTree = "<group>"; };
 		D3B5131E243A815A00117C2C /* bleConnectingAnimation.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = bleConnectingAnimation.gif; sourceTree = "<group>"; };
+		D3E60015244270D7007C2F8D /* ONEDAY.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ONEDAY.ttf; sourceTree = "<group>"; };
+		D3E6001824427250007C2F8D /* FontsVentivader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontsVentivader.swift; sourceTree = "<group>"; };
 		EE0842B19478DF756AD78A19 /* Pods-VentivaderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VentivaderTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VentivaderTests/Pods-VentivaderTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F7B7BCEF53F51C3168841604 /* Pods-VentivaderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VentivaderTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VentivaderTests/Pods-VentivaderTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -203,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				D34430472440F94B0087EA9B /* ColorPallete.swift */,
+				D3E6001824427250007C2F8D /* FontsVentivader.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -219,6 +224,7 @@
 		BA5DEB7B24375EEC006A6BB8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D3E60013244270AA007C2F8D /* Fonts */,
 				D3B5131D243A7F8500117C2C /* Animations */,
 				BA5DEB5A24374C9F006A6BB8 /* Assets.xcassets */,
 			);
@@ -240,6 +246,14 @@
 				D3B5131E243A815A00117C2C /* bleConnectingAnimation.gif */,
 			);
 			path = Animations;
+			sourceTree = "<group>";
+		};
+		D3E60013244270AA007C2F8D /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				D3E60015244270D7007C2F8D /* ONEDAY.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -331,6 +345,7 @@
 				D35F4DFF24395A310001FC88 /* VentilatorParameterTileView.xib in Resources */,
 				D35F4E07243972000001FC88 /* VentilatorStatusView.xib in Resources */,
 				D3B5131F243A815A00117C2C /* bleConnectingAnimation.gif in Resources */,
+				D3E60017244270D7007C2F8D /* ONEDAY.ttf in Resources */,
 				BA5DEB5924374C9C006A6BB8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -422,6 +437,7 @@
 				BA5DEB5424374C9C006A6BB8 /* AppDelegate.swift in Sources */,
 				D35F4E01243971BC0001FC88 /* VentilatorStatusView.swift in Sources */,
 				D3B5131C243A7EBB00117C2C /* ConnectingBLEViewController.swift in Sources */,
+				D3E6001924427250007C2F8D /* FontsVentivader.swift in Sources */,
 				D35F4DFD243949E80001FC88 /* VentilatorParameterTileView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -11,10 +11,12 @@ import SwiftGifOrigin
 
 class ConnectingBLEViewController: UIViewController {
     @IBOutlet weak var animationLoadingImage: UIImageView!
+    @IBOutlet weak var headerLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         animationLoadingImage.loadGif(name: "bleConnectingAnimation")
+        headerLabel.textColor = ColorPallete.secondaryBackgroundColor
+        headerLabel.updateFontOnly(name: VentivaderFonts.titleFont)
     }
     
     override func viewWillAppear(_ animated: Bool) {
