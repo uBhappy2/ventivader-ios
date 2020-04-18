@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2E6E8C50A938850E9F362E09 /* Pods_VentivaderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5804350A7961552154493C2D /* Pods_VentivaderTests.framework */; };
-		3BA067C24AC6CAB9BDABBD8B /* Pods_Ventivader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFE1A668078A3C75C484D31D /* Pods_Ventivader.framework */; };
+		4D0756DA905AC44B3176DF53 /* libPods-VentivaderTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E0AD7F0EA9ADA9C8838C096 /* libPods-VentivaderTests.a */; };
 		4F25632C243988E300CFD2F1 /* VentivaderBluetoothExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F25632B243988E300CFD2F1 /* VentivaderBluetoothExtensions.swift */; };
+		7B8400B4EDDCE330AE464490 /* libPods-Ventivader.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C7212E140DF30D59BE4D151 /* libPods-Ventivader.a */; };
 		BA5DEB5424374C9C006A6BB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5DEB5324374C9C006A6BB8 /* AppDelegate.swift */; };
 		BA5DEB5624374C9C006A6BB8 /* VentivaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5DEB5524374C9C006A6BB8 /* VentivaderViewController.swift */; };
 		BA5DEB5924374C9C006A6BB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA5DEB5724374C9C006A6BB8 /* Main.storyboard */; };
@@ -44,11 +44,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E0AD7F0EA9ADA9C8838C096 /* libPods-VentivaderTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VentivaderTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A5044DD0588C01F4A3195C6 /* Pods-Ventivader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ventivader.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ventivader/Pods-Ventivader.release.xcconfig"; sourceTree = "<group>"; };
 		3F3A277B319484632BB8E2A3 /* Pods-Ventivader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ventivader.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Ventivader/Pods-Ventivader.debug.xcconfig"; sourceTree = "<group>"; };
 		4F25632B243988E300CFD2F1 /* VentivaderBluetoothExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VentivaderBluetoothExtensions.swift; sourceTree = "<group>"; };
-		5804350A7961552154493C2D /* Pods_VentivaderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VentivaderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AFE1A668078A3C75C484D31D /* Pods_Ventivader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ventivader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C7212E140DF30D59BE4D151 /* libPods-Ventivader.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Ventivader.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA5DEB5024374C9C006A6BB8 /* Ventivader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ventivader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA5DEB5324374C9C006A6BB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA5DEB5524374C9C006A6BB8 /* VentivaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VentivaderViewController.swift; sourceTree = "<group>"; };
@@ -83,7 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3BA067C24AC6CAB9BDABBD8B /* Pods_Ventivader.framework in Frameworks */,
+				7B8400B4EDDCE330AE464490 /* libPods-Ventivader.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,7 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E6E8C50A938850E9F362E09 /* Pods_VentivaderTests.framework in Frameworks */,
+				4D0756DA905AC44B3176DF53 /* libPods-VentivaderTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,8 +101,8 @@
 		157AA38DFB6194551CB72D12 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				AFE1A668078A3C75C484D31D /* Pods_Ventivader.framework */,
-				5804350A7961552154493C2D /* Pods_VentivaderTests.framework */,
+				9C7212E140DF30D59BE4D151 /* libPods-Ventivader.a */,
+				0E0AD7F0EA9ADA9C8838C096 /* libPods-VentivaderTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -267,7 +267,7 @@
 				BA5DEB4C24374C9C006A6BB8 /* Sources */,
 				BA5DEB4D24374C9C006A6BB8 /* Frameworks */,
 				BA5DEB4E24374C9C006A6BB8 /* Resources */,
-				D150260F4D54D17328CF7CE4 /* [CP] Embed Pods Frameworks */,
+				473AC6E4EAE77AED86B61807 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -378,26 +378,22 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D150260F4D54D17328CF7CE4 /* [CP] Embed Pods Frameworks */ = {
+		473AC6E4EAE77AED86B61807 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Ventivader/Pods-Ventivader-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
-				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftGifOrigin/SwiftGifOrigin.framework",
+				"${SRCROOT}/Pods/Target Support Files/Pods-Ventivader/Pods-Ventivader-resources.sh",
+				"${PODS_ROOT}/IQKeyboardManagerSwift/IQKeyboardManagerSwift/Resources/IQKeyboardManager.bundle",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftGifOrigin.framework",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Ventivader/Pods-Ventivader-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Ventivader/Pods-Ventivader-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F7FA8D7ED3BDE7E63F27F2A1 /* [CP] Check Pods Manifest.lock */ = {
@@ -602,14 +598,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 93TH93CMJB;
+				DEVELOPMENT_TEAM = 54L86QB3ZV;
 				INFOPLIST_FILE = Ventivader/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = edu.uci.Ventivader;
+				PRODUCT_BUNDLE_IDENTIFIER = ventivader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -622,14 +618,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 93TH93CMJB;
+				DEVELOPMENT_TEAM = 54L86QB3ZV;
 				INFOPLIST_FILE = Ventivader/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = edu.uci.Ventivader;
+				PRODUCT_BUNDLE_IDENTIFIER = ventivader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
