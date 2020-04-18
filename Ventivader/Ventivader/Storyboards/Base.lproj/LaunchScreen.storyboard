@@ -21,7 +21,7 @@
                                     <constraint firstAttribute="width" secondItem="nrp-ga-w2A" secondAttribute="height" multiplier="1:1" id="w3H-63-3Rd"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VENTIVADER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="BHk-lM-hDo">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VENTIVADER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="BHk-lM-hDo">
                                 <rect key="frame" x="145" y="452.5" width="124" height="70.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="59"/>
                                 <nil key="textColor"/>
