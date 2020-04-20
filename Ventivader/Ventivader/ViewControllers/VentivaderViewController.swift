@@ -31,7 +31,7 @@ class VentivaderViewController: UIViewController {
         super.viewDidLoad()
         overrideUserInterfaceStyle = .light
         
-        centralManager = CBCentralManager(delegate: self, queue: nil)
+        //centralManager = CBCentralManager(delegate: self, queue: nil)
         
         // Do any additional setup after loading the view, typically from a nib.
         self.inhaleTimeInSecs.delegate = self

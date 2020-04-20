@@ -12,6 +12,7 @@ import SwiftGifOrigin
 class ConnectingBLEViewController: UIViewController {
     @IBOutlet weak var animationLoadingImage: UIImageView!
     @IBOutlet weak var headerLabel: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         animationLoadingImage.loadGif(name: "bleConnectingAnimation")

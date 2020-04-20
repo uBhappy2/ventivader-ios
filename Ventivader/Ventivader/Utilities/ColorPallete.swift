@@ -15,6 +15,9 @@ class ColorPallete {
     static let secondaryHighlightColor = UIColor(hex: "#3282b8")!
     static let highlightColor = UIColor(hex: "#bbe1fa")!
     static let outstandingBackground = UIColor(hex: "#e6c62f")!
+    
+    // Errors
+    static let errorBackground = UIColor(red: 8/255.0, green: 24/255.0, blue: 51/255.0, alpha: 1.0 )
 }
 
 extension UIColor {
