@@ -48,7 +48,6 @@ final class VentilatorStatusView: UIView {
 
         statusSignalView.layer.cornerRadius = statusSignalView.frame.width/2
         
-        
         applyColors()
     }
 

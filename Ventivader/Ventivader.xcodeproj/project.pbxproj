@@ -27,6 +27,13 @@
 		D35F4DFF24395A310001FC88 /* VentilatorParameterTileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D35F4DFE24395A310001FC88 /* VentilatorParameterTileView.xib */; };
 		D35F4E01243971BC0001FC88 /* VentilatorStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35F4E00243971BC0001FC88 /* VentilatorStatusView.swift */; };
 		D35F4E07243972000001FC88 /* VentilatorStatusView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D35F4E06243972000001FC88 /* VentilatorStatusView.xib */; };
+		D393E7C02453778400555BBD /* turnBleOn.gif in Resources */ = {isa = PBXBuildFile; fileRef = D393E7BD2453778400555BBD /* turnBleOn.gif */; };
+		D393E7C12453778400555BBD /* ventivaderAnimated.gif in Resources */ = {isa = PBXBuildFile; fileRef = D393E7BE2453778400555BBD /* ventivaderAnimated.gif */; };
+		D393E7C22453778400555BBD /* blePermissions.gif in Resources */ = {isa = PBXBuildFile; fileRef = D393E7BF2453778400555BBD /* blePermissions.gif */; };
+		D393E7D22453801500555BBD /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D393E7C82453801500555BBD /* OpenSans-Regular.ttf */; };
+		D393E7D62453801500555BBD /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D393E7CC2453801500555BBD /* OpenSans-Bold.ttf */; };
+		D393E7D72453801500555BBD /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D393E7CD2453801500555BBD /* OpenSans-Light.ttf */; };
+		D393E7D82453801500555BBD /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D393E7CE2453801500555BBD /* OpenSans-Italic.ttf */; };
 		D3B5131C243A7EBB00117C2C /* ConnectingBLEViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B5131B243A7EBB00117C2C /* ConnectingBLEViewController.swift */; };
 		D3B5131F243A815A00117C2C /* bleConnectingAnimation.gif in Resources */ = {isa = PBXBuildFile; fileRef = D3B5131E243A815A00117C2C /* bleConnectingAnimation.gif */; };
 		D3C12D4F244BDBBD00E0E7A9 /* ConnectingBLEViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C12D4E244BDBBD00E0E7A9 /* ConnectingBLEViewModel.swift */; };
@@ -74,6 +81,13 @@
 		D35F4DFE24395A310001FC88 /* VentilatorParameterTileView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = VentilatorParameterTileView.xib; path = Ventivader/ViewModels/VentilatorParameterTileView.xib; sourceTree = SOURCE_ROOT; };
 		D35F4E00243971BC0001FC88 /* VentilatorStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VentilatorStatusView.swift; path = Ventivader/ViewModels/VentilatorStatusView.swift; sourceTree = SOURCE_ROOT; };
 		D35F4E06243972000001FC88 /* VentilatorStatusView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = VentilatorStatusView.xib; path = Ventivader/ViewModels/VentilatorStatusView.xib; sourceTree = SOURCE_ROOT; };
+		D393E7BD2453778400555BBD /* turnBleOn.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = turnBleOn.gif; sourceTree = "<group>"; };
+		D393E7BE2453778400555BBD /* ventivaderAnimated.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = ventivaderAnimated.gif; sourceTree = "<group>"; };
+		D393E7BF2453778400555BBD /* blePermissions.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = blePermissions.gif; sourceTree = "<group>"; };
+		D393E7C82453801500555BBD /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		D393E7CC2453801500555BBD /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		D393E7CD2453801500555BBD /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		D393E7CE2453801500555BBD /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Italic.ttf"; sourceTree = "<group>"; };
 		D3B5131B243A7EBB00117C2C /* ConnectingBLEViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectingBLEViewController.swift; sourceTree = "<group>"; };
 		D3B5131E243A815A00117C2C /* bleConnectingAnimation.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = bleConnectingAnimation.gif; sourceTree = "<group>"; };
 		D3C12D4E244BDBBD00E0E7A9 /* ConnectingBLEViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectingBLEViewModel.swift; sourceTree = "<group>"; };
@@ -252,9 +266,23 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		D393E7C524537FEC00555BBD /* OpenSans */ = {
+			isa = PBXGroup;
+			children = (
+				D393E7CC2453801500555BBD /* OpenSans-Bold.ttf */,
+				D393E7CE2453801500555BBD /* OpenSans-Italic.ttf */,
+				D393E7CD2453801500555BBD /* OpenSans-Light.ttf */,
+				D393E7C82453801500555BBD /* OpenSans-Regular.ttf */,
+			);
+			path = OpenSans;
+			sourceTree = "<group>";
+		};
 		D3B5131D243A7F8500117C2C /* Animations */ = {
 			isa = PBXGroup;
 			children = (
+				D393E7BF2453778400555BBD /* blePermissions.gif */,
+				D393E7BD2453778400555BBD /* turnBleOn.gif */,
+				D393E7BE2453778400555BBD /* ventivaderAnimated.gif */,
 				D3B5131E243A815A00117C2C /* bleConnectingAnimation.gif */,
 			);
 			path = Animations;
@@ -263,6 +291,7 @@
 		D3E60013244270AA007C2F8D /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				D393E7C524537FEC00555BBD /* OpenSans */,
 				D3E60015244270D7007C2F8D /* ONEDAY.ttf */,
 			);
 			path = Fonts;
@@ -353,10 +382,17 @@
 			files = (
 				BA5DEB5E24374C9F006A6BB8 /* LaunchScreen.storyboard in Resources */,
 				BA5DEB5B24374C9F006A6BB8 /* Assets.xcassets in Resources */,
+				D393E7D62453801500555BBD /* OpenSans-Bold.ttf in Resources */,
+				D393E7C02453778400555BBD /* turnBleOn.gif in Resources */,
+				D393E7D72453801500555BBD /* OpenSans-Light.ttf in Resources */,
 				D35F4DFF24395A310001FC88 /* VentilatorParameterTileView.xib in Resources */,
 				D35F4E07243972000001FC88 /* VentilatorStatusView.xib in Resources */,
+				D393E7D82453801500555BBD /* OpenSans-Italic.ttf in Resources */,
+				D393E7C22453778400555BBD /* blePermissions.gif in Resources */,
 				D3B5131F243A815A00117C2C /* bleConnectingAnimation.gif in Resources */,
 				D3E60017244270D7007C2F8D /* ONEDAY.ttf in Resources */,
+				D393E7C12453778400555BBD /* ventivaderAnimated.gif in Resources */,
+				D393E7D22453801500555BBD /* OpenSans-Regular.ttf in Resources */,
 				BA5DEB5924374C9C006A6BB8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

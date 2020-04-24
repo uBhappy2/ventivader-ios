@@ -34,18 +34,35 @@ class LiveDataChartViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { [weak self] timer in
-            self?.dataSet.append(Double.random(in: 0.0 ..< 20.0))
-            self?.updateChart()
-        }
         customizeChart()
         setupLabel()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        timer?.invalidate()
-        timer = nil
+        super.viewWillDisappear(animated)
+        invalidateTimer()
     }
+    
+    func stopDataFlow() {
+        invalidateTimer()
+    }
+    
+    func startDataFlow() {
+        DispatchQueue.main.async { [weak self] in
+            self?.timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { [weak self] _ in
+                self?.dataSet.append(Double.random(in: 0.0 ..< 20.0))
+                self?.updateChart()
+            }
+        }
+    }
+    
+    private func invalidateTimer() {
+        DispatchQueue.main.async { [weak self] in
+            self?.timer?.invalidate()
+            self?.timer = nil
+        }
+    }
+    
     
     private func setupLabel() {
         titleLabel.textColor = ColorPallete.highlightColor

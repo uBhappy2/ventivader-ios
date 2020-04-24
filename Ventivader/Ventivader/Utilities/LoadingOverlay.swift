@@ -24,7 +24,7 @@ public class LoadingOverlay {
         
         let titleLabel = UILabel()
         titleLabel.text = NSLocalizedString("Connecting BLE...", comment: "title for connecting BLE")
-        titleLabel.updateFontOnly(name: VentivaderFonts.titleFont)
+        titleLabel.updateFont(name: VentivaderFonts.titleFont)
         titleLabel.textAlignment =  .center
         
         containerView.addSubview(animationView)

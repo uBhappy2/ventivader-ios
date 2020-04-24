@@ -25,16 +25,13 @@ final class VentilatorControlPanelViewModel {
                     bleUnauthorizedClosure: @escaping () -> Void,
                     deviceFound: @escaping () -> Void,
                     deviceNotFound: @escaping () -> Void) {
-        
-        
         bleManager = BLEManager(bleReadyToScan: { [weak self] in
-            self?.timer = Timer.scheduledTimer(withTimeInterval: 30.0, repeats: false) { [weak self] _ in
+            self?.timer = Timer.scheduledTimer(withTimeInterval: 5.0, repeats: false) { [weak self] _ in
                 self?.invalidateTimer()
                 self?.bleManager?.stopScanning()
                 deviceNotFound()
             }
-            
-        },bleOffClosure: { [weak self] in
+        }, bleOffClosure: { [weak self] in
             bleOff()
             self?.invalidateTimer()
         }, bleUnauthorizedClosure: { [weak self] in

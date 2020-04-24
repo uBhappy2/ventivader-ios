@@ -25,6 +25,10 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>ONEDAY.ttf</string>
+		<string>OpenSans-Bold.ttf</string>
+		<string>OpenSans-Italic.ttf</string>
+		<string>OpenSans-Light.ttf</string>
+		<string>OpenSans-Regular.ttf</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>

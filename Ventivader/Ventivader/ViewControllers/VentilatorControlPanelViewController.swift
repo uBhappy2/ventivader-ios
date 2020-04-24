@@ -16,7 +16,11 @@ class VentilatorControlPanelViewController: UIViewController {
     @IBOutlet var titleView: UIView!
 
     private let viewModel = VentilatorControlPanelViewModel()
-    private let errorFactory = ErrorScreenProvider()
+    private let errorProvider = ErrorScreenProvider()
+    
+    private var liveDataChartVCs: [LiveDataChartViewController] {
+        return children.compactMap { $0 as? LiveDataChartViewController }
+    }
 
     // MARK: - ViewController Life Cycle
     
@@ -25,7 +29,7 @@ class VentilatorControlPanelViewController: UIViewController {
         setupTitleView()
         setupPlots()
         setupStatusViews()
-        setupParameters()
+        setupParametersControlPanel()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -48,7 +52,6 @@ class VentilatorControlPanelViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
         if  let chartVC = segue.destination as? LiveDataChartViewController {
             switch segue.identifier {
             case "pressureChartSegue":
@@ -67,6 +70,7 @@ class VentilatorControlPanelViewController: UIViewController {
     
     private func setupPlots() {
         plotsStackView.backgroundColor = ColorPallete.backgroundColor
+        liveDataChartVCs.forEach { $0.stopDataFlow() }
     }
     
     private func setupStatusViews() {
@@ -94,11 +98,11 @@ class VentilatorControlPanelViewController: UIViewController {
         titleView.subviews.forEach {
             let label = $0 as? UILabel
             label?.textColor = ColorPallete.highlightColor
-            label?.updateFontOnly(name: VentivaderFonts.titleFont)
+            label?.updateFont(name: VentivaderFonts.titleFont)
         }
     }
     
-    private func setupParameters() {
+    private func setupParametersControlPanel() {
         controlPanelStackView.addBackground(color: ColorPallete.backgroundColor)
         let parametersViews: [VentilatorParameterTileView] = viewModel.ventilatorParameters.map { parameter in
             let ventilatorParameterView = VentilatorParameterTileView.instanceFromNib()
@@ -120,10 +124,11 @@ class VentilatorControlPanelViewController: UIViewController {
     }
     
     private func showBLEDisabledErrorScreen() {
-        
         let imageView = UIImageView()
+        imageView.loadGif(name: "turnBleOn")
+        imageView.contentMode = .scaleAspectFit
         
-        errorFactory.showError(inView: view,
+        errorProvider.showError(inView: view,
                                title: NSLocalizedString("Turn On Bluetooth", comment: "Error screen title"),
                                body: NSLocalizedString("You need to turn on Bluetooth to pair with VentiVader", comment: "Error screen body"),
                                imageView: imageView)
@@ -131,23 +136,34 @@ class VentilatorControlPanelViewController: UIViewController {
     
     private func showBLEUnauthorizedScreen() {
         let imageView = UIImageView()
+        imageView.contentMode = .scaleAspectFit
+        imageView.loadGif(name: "blePermissions")
         
-        errorFactory.showError(inView: view,
-                               title: NSLocalizedString("Bluetooth Permissions Required", comment: "Error screen title"),
-                               body: NSLocalizedString("You need to give us permission to use your Bluetooth to pair with Ventivader", comment: "Error screen body"),
-                               buttonTitle: NSLocalizedString("Go to Settings", comment: "Buttton in ventilator BLE permission was not granted"),
-                               imageView: imageView)
-        
+        errorProvider.showError(inView: view,
+                                title: NSLocalizedString("Bluetooth Permissions Required", comment: "Error screen title"),
+                                body: NSLocalizedString("You need to give us permission to use your Bluetooth to pair with Ventivader", comment: "Error screen body"),
+                                buttonTitle: NSLocalizedString("Go to Settings", comment: "Buttton in ventilator BLE permission was not granted"),
+                                imageView: imageView,
+                                actionButtonTapClosure: {
+                                    if let appSettingsURL = URL(string: UIApplication.openSettingsURLString), UIApplication.shared.canOpenURL(appSettingsURL) {
+                                        UIApplication.shared.open(appSettingsURL)
+                                    }
+        })
     }
     
     private func showBLENotFound() {
         let imageView = UIImageView()
+        imageView.loadGif(name: "ventivaderAnimated")
+        imageView.contentMode = .scaleAspectFit
         
-        errorFactory.showError(inView: view,
+        errorProvider.showError(inView: view,
                                title: NSLocalizedString("Ventivader not found", comment: "Error screen title"),
                                body: NSLocalizedString("Make sure the ventilator is on.\n Make sure the ventialor is about 3 fts close.", comment: "Error screen body"),
                                buttonTitle: NSLocalizedString("Try Again", comment: "Buttton in ventilator not found error screen"),
-                               imageView: imageView)
+                               imageView: imageView,
+                               actionButtonTapClosure: { [weak self] in
+                                self?.errorProvider.dismissCurrentErorView()
+        })
     }
     
 }
