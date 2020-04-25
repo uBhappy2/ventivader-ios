@@ -12,15 +12,21 @@ class BLEManager: NSObject {
     private var bleOffClosure: (() -> Void)
     private var bleUnauthorizedClosure: (() -> Void)
     private var bleReadyToScan: (() -> Void)
+    private var connectedToDevice: (() -> Void)
+    private var valueUpdatedClosure: ((Data) -> Void)
     private var centralManager: CBCentralManager?
+    private var connectedPeripherial: CBPeripheral?
     
     init(bleReadyToScan: @escaping (() -> Void),
          bleOffClosure: @escaping (() -> Void),
          bleUnauthorizedClosure: @escaping (() -> Void),
-         connected: @escaping (() -> Void)) {
+         connected: @escaping (() -> Void),
+         valueUpdatedClosure: @escaping ((Data) -> Void) ) {
         self.bleOffClosure = bleOffClosure
         self.bleUnauthorizedClosure = bleUnauthorizedClosure
         self.bleReadyToScan =  bleReadyToScan
+        self.connectedToDevice = connected
+        self.valueUpdatedClosure = valueUpdatedClosure
         
         super.init()
         
@@ -42,7 +48,7 @@ extension BLEManager: CBCentralManagerDelegate {
             case .poweredOn:
                 print("central.state is .poweredOn")
                 bleReadyToScan()
-                central.scanForPeripherals(withServices: [BLEProperties.serviceUUID], options: nil)
+                central.scanForPeripherals(withServices: [BLEProperties.uartServiceUUID], options: nil)
             default:
                 break
         }
@@ -50,6 +56,7 @@ extension BLEManager: CBCentralManagerDelegate {
     
     func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String: Any], rssi RSSI: NSNumber) {
         print("Peripheral Found!: \(peripheral)")
+        connectedPeripherial = peripheral
         central.stopScan()
         central.connect(peripheral, options: nil)
     }
@@ -64,7 +71,7 @@ extension BLEManager: CBPeripheralDelegate {
     func peripheral(_ peripheral: CBPeripheral, didDiscoverServices error: Error?) {
         guard let services = peripheral.services else { return }
         
-        if let service = services.first(where: { $0.uuid == BLEProperties.serviceUUID }) {
+        if let service = services.first(where: { $0.uuid == BLEProperties.uartServiceUUID }) {
             peripheral.discoverCharacteristics(nil, for: service)
         }
     }
@@ -74,11 +81,22 @@ extension BLEManager: CBPeripheralDelegate {
                     error: Error?) {
         guard let characteristics = service.characteristics else { return }
         print(characteristics)
+       
+        characteristics.forEach { characteristic in
+            if characteristic.uuid.isEqual(BLEProperties.Characteristics.uartRX) {
+                // Register for UART RX characteristic
+                peripheral.setNotifyValue(true, for: characteristic)
+            }
+        }
+        connectedToDevice()
     }
     
     func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
+        guard let characteristicValue = characteristic.value else { return }
+        valueUpdatedClosure(characteristicValue)
     }
     
     func peripheral(_ peripheral: CBPeripheral, didWriteValueFor characteristic: CBCharacteristic, error: Error?) {
+        print(characteristic)
     }
 }

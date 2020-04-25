@@ -24,9 +24,10 @@ final class VentilatorControlPanelViewModel {
     func connectBLE(bleOff: @escaping () -> Void,
                     bleUnauthorizedClosure: @escaping () -> Void,
                     deviceFound: @escaping () -> Void,
-                    deviceNotFound: @escaping () -> Void) {
+                    deviceNotFound: @escaping () -> Void,
+                    valueUpdatedClosure: @escaping (Data) -> Void) {
         bleManager = BLEManager(bleReadyToScan: { [weak self] in
-            self?.timer = Timer.scheduledTimer(withTimeInterval: 5.0, repeats: false) { [weak self] _ in
+            self?.timer = Timer.scheduledTimer(withTimeInterval: 35.0, repeats: false) { [weak self] _ in
                 self?.invalidateTimer()
                 self?.bleManager?.stopScanning()
                 deviceNotFound()
@@ -40,7 +41,7 @@ final class VentilatorControlPanelViewModel {
         }, connected: { [weak self] in
             deviceFound()
             self?.invalidateTimer()
-        })
+        }, valueUpdatedClosure: valueUpdatedClosure )
     }
     
     deinit {

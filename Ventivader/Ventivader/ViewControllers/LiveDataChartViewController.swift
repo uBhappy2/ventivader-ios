@@ -56,6 +56,11 @@ class LiveDataChartViewController: UIViewController {
         }
     }
     
+    func addToChart(newValue: Double){
+        dataSet.append(newValue)
+        updateChart()
+    }
+    
     private func invalidateTimer() {
         DispatchQueue.main.async { [weak self] in
             self?.timer?.invalidate()

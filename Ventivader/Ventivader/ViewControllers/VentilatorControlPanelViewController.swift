@@ -48,6 +48,11 @@ class VentilatorControlPanelViewController: UIViewController {
             overlay.removeLoadingOverlayView()
         }, deviceNotFound: {  [weak self] in
             self?.showBLENotFound()
+        }, valueUpdatedClosure: { [weak self] receivedData  in
+            if let json = try? JSONSerialization.jsonObject(with: receivedData, options: []),
+               let jsonDictionaty = json as? [String: Double] {
+                self?.updateCharts(withJson: jsonDictionaty)
+            }
         })
     }
     
@@ -164,6 +169,15 @@ class VentilatorControlPanelViewController: UIViewController {
                                actionButtonTapClosure: { [weak self] in
                                 self?.errorProvider.dismissCurrentErorView()
         })
+    }
+    
+    private func updateCharts(withJson json: [String:Double]) {
+        liveDataChartVCs.forEach { vc in
+            if  let key = vc.viewModel.chartType?.rawValue,
+                let newValue = json[key] {
+                vc.addToChart(newValue: newValue)
+            }
+        }
     }
     
 }
