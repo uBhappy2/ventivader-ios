@@ -1,0 +1,22 @@
+PODS:
+  - Charts (3.5.0):
+    - Charts/Core (= 3.5.0)
+  - Charts/Core (3.5.0)
+  - SwiftGifOrigin (1.6.1)
+
+DEPENDENCIES:
+  - Charts
+  - SwiftGifOrigin
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Charts
+    - SwiftGifOrigin
+
+SPEC CHECKSUMS:
+  Charts: 40a08591df1f8ad5c223ddedfb1a06da92f24f7c
+  SwiftGifOrigin: d6679d3ebe9df2e049a84bc52582635107b581f6
+
+PODFILE CHECKSUM: 5e1226650da8b0a801ea88805687b5ecc42c84db
+
+COCOAPODS: 1.5.2

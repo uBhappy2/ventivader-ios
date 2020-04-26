@@ -22,6 +22,10 @@
 	<true/>
 	<key>NSBluetoothAlwaysUsageDescription</key>
 	<string>We need bluetooth access to communicate with the bridged ventilator</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>ONEDAY.ttf</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

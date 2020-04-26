@@ -8,12 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		4F25632C243988E300CFD2F1 /* VentivaderBluetoothExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F25632B243988E300CFD2F1 /* VentivaderBluetoothExtensions.swift */; };
+		70BA3ECF668FB2334B269DEA /* libPods-VentivaderTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04373846175D12EDD7426BAE /* libPods-VentivaderTests.a */; };
+		7EF52019339A04C2C80F7BA3 /* libPods-Ventivader.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 17D08D3590D1C557EF8632D1 /* libPods-Ventivader.a */; };
 		BA5DEB5424374C9C006A6BB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5DEB5324374C9C006A6BB8 /* AppDelegate.swift */; };
 		BA5DEB5624374C9C006A6BB8 /* VentivaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5DEB5524374C9C006A6BB8 /* VentivaderViewController.swift */; };
 		BA5DEB5924374C9C006A6BB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA5DEB5724374C9C006A6BB8 /* Main.storyboard */; };
 		BA5DEB5B24374C9F006A6BB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA5DEB5A24374C9F006A6BB8 /* Assets.xcassets */; };
 		BA5DEB5E24374C9F006A6BB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA5DEB5C24374C9F006A6BB8 /* LaunchScreen.storyboard */; };
 		BA5DEB6924374C9F006A6BB8 /* VentivaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5DEB6824374C9F006A6BB8 /* VentivaderTests.swift */; };
+		D32627E8243A385C00CB212A /* VentilatorParametersManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32627E7243A385C00CB212A /* VentilatorParametersManager.swift */; };
+		D32627EC243A468400CB212A /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32627EB243A468400CB212A /* BaseVC.swift */; };
+		D34430422440E8260087EA9B /* LiveDataChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34430412440E8260087EA9B /* LiveDataChartViewController.swift */; };
+		D34430482440F94B0087EA9B /* ColorPallete.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34430472440F94B0087EA9B /* ColorPallete.swift */; };
+		D344304C24412BB90087EA9B /* LiveDataChartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D344304B24412BB90087EA9B /* LiveDataChartViewModel.swift */; };
+		D35F4DF824393FA60001FC88 /* VentilatorControlPanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35F4DF724393FA60001FC88 /* VentilatorControlPanelViewController.swift */; };
+		D35F4DFB243944D50001FC88 /* VentilatorControlPanelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35F4DFA243944D50001FC88 /* VentilatorControlPanelViewModel.swift */; };
+		D35F4DFD243949E80001FC88 /* VentilatorParameterTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35F4DFC243949E80001FC88 /* VentilatorParameterTileView.swift */; };
+		D35F4DFF24395A310001FC88 /* VentilatorParameterTileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D35F4DFE24395A310001FC88 /* VentilatorParameterTileView.xib */; };
+		D35F4E01243971BC0001FC88 /* VentilatorStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35F4E00243971BC0001FC88 /* VentilatorStatusView.swift */; };
+		D35F4E07243972000001FC88 /* VentilatorStatusView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D35F4E06243972000001FC88 /* VentilatorStatusView.xib */; };
+		D3B5131C243A7EBB00117C2C /* ConnectingBLEViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B5131B243A7EBB00117C2C /* ConnectingBLEViewController.swift */; };
+		D3B5131F243A815A00117C2C /* bleConnectingAnimation.gif in Resources */ = {isa = PBXBuildFile; fileRef = D3B5131E243A815A00117C2C /* bleConnectingAnimation.gif */; };
+		D3E60017244270D7007C2F8D /* ONEDAY.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D3E60015244270D7007C2F8D /* ONEDAY.ttf */; };
+		D3E6001924427250007C2F8D /* FontsVentivader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E6001824427250007C2F8D /* FontsVentivader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +44,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04373846175D12EDD7426BAE /* libPods-VentivaderTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VentivaderTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		17D08D3590D1C557EF8632D1 /* libPods-Ventivader.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Ventivader.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A5044DD0588C01F4A3195C6 /* Pods-Ventivader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ventivader.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ventivader/Pods-Ventivader.release.xcconfig"; sourceTree = "<group>"; };
+		3F3A277B319484632BB8E2A3 /* Pods-Ventivader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ventivader.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Ventivader/Pods-Ventivader.debug.xcconfig"; sourceTree = "<group>"; };
 		4F25632B243988E300CFD2F1 /* VentivaderBluetoothExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VentivaderBluetoothExtensions.swift; sourceTree = "<group>"; };
 		BA5DEB5024374C9C006A6BB8 /* Ventivader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ventivader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA5DEB5324374C9C006A6BB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +59,23 @@
 		BA5DEB6424374C9F006A6BB8 /* VentivaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VentivaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA5DEB6824374C9F006A6BB8 /* VentivaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VentivaderTests.swift; sourceTree = "<group>"; };
 		BA5DEB6A24374C9F006A6BB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D32627E7243A385C00CB212A /* VentilatorParametersManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VentilatorParametersManager.swift; sourceTree = "<group>"; };
+		D32627EB243A468400CB212A /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
+		D34430412440E8260087EA9B /* LiveDataChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveDataChartViewController.swift; sourceTree = "<group>"; };
+		D34430472440F94B0087EA9B /* ColorPallete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPallete.swift; sourceTree = "<group>"; };
+		D344304B24412BB90087EA9B /* LiveDataChartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveDataChartViewModel.swift; sourceTree = "<group>"; };
+		D35F4DF724393FA60001FC88 /* VentilatorControlPanelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VentilatorControlPanelViewController.swift; sourceTree = "<group>"; };
+		D35F4DFA243944D50001FC88 /* VentilatorControlPanelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VentilatorControlPanelViewModel.swift; sourceTree = "<group>"; };
+		D35F4DFC243949E80001FC88 /* VentilatorParameterTileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VentilatorParameterTileView.swift; path = Ventivader/ViewModels/VentilatorParameterTileView.swift; sourceTree = SOURCE_ROOT; };
+		D35F4DFE24395A310001FC88 /* VentilatorParameterTileView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = VentilatorParameterTileView.xib; path = Ventivader/ViewModels/VentilatorParameterTileView.xib; sourceTree = SOURCE_ROOT; };
+		D35F4E00243971BC0001FC88 /* VentilatorStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VentilatorStatusView.swift; path = Ventivader/ViewModels/VentilatorStatusView.swift; sourceTree = SOURCE_ROOT; };
+		D35F4E06243972000001FC88 /* VentilatorStatusView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = VentilatorStatusView.xib; path = Ventivader/ViewModels/VentilatorStatusView.xib; sourceTree = SOURCE_ROOT; };
+		D3B5131B243A7EBB00117C2C /* ConnectingBLEViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectingBLEViewController.swift; sourceTree = "<group>"; };
+		D3B5131E243A815A00117C2C /* bleConnectingAnimation.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = bleConnectingAnimation.gif; sourceTree = "<group>"; };
+		D3E60015244270D7007C2F8D /* ONEDAY.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ONEDAY.ttf; sourceTree = "<group>"; };
+		D3E6001824427250007C2F8D /* FontsVentivader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontsVentivader.swift; sourceTree = "<group>"; };
+		EE0842B19478DF756AD78A19 /* Pods-VentivaderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VentivaderTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VentivaderTests/Pods-VentivaderTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F7B7BCEF53F51C3168841604 /* Pods-VentivaderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VentivaderTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VentivaderTests/Pods-VentivaderTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EF52019339A04C2C80F7BA3 /* libPods-Ventivader.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,18 +91,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70BA3ECF668FB2334B269DEA /* libPods-VentivaderTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		157AA38DFB6194551CB72D12 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				17D08D3590D1C557EF8632D1 /* libPods-Ventivader.a */,
+				04373846175D12EDD7426BAE /* libPods-VentivaderTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8A8E6C7EE12F7B6F9FADA78C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3F3A277B319484632BB8E2A3 /* Pods-Ventivader.debug.xcconfig */,
+				2A5044DD0588C01F4A3195C6 /* Pods-Ventivader.release.xcconfig */,
+				EE0842B19478DF756AD78A19 /* Pods-VentivaderTests.debug.xcconfig */,
+				F7B7BCEF53F51C3168841604 /* Pods-VentivaderTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		BA5DEB4724374C9C006A6BB8 = {
 			isa = PBXGroup;
 			children = (
 				BA5DEB5224374C9C006A6BB8 /* Ventivader */,
 				BA5DEB6724374C9F006A6BB8 /* VentivaderTests */,
 				BA5DEB5124374C9C006A6BB8 /* Products */,
+				8A8E6C7EE12F7B6F9FADA78C /* Pods */,
+				157AA38DFB6194551CB72D12 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -84,6 +146,7 @@
 				BA5DEB7B24375EEC006A6BB8 /* Resources */,
 				BA5DEB7A24375ED5006A6BB8 /* Storyboards */,
 				BA5DEB7624375E6D006A6BB8 /* Managers */,
+				D35F4DF9243944830001FC88 /* ViewModels */,
 				BA5DEB7724375E77006A6BB8 /* Services */,
 				BA5DEB7424375E49006A6BB8 /* ViewControllers */,
 				BA5DEB7324375E39006A6BB8 /* Views */,
@@ -104,6 +167,10 @@
 		BA5DEB7324375E39006A6BB8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D35F4DFC243949E80001FC88 /* VentilatorParameterTileView.swift */,
+				D35F4DFE24395A310001FC88 /* VentilatorParameterTileView.xib */,
+				D35F4E00243971BC0001FC88 /* VentilatorStatusView.swift */,
+				D35F4E06243972000001FC88 /* VentilatorStatusView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -112,6 +179,10 @@
 			isa = PBXGroup;
 			children = (
 				BA5DEB5524374C9C006A6BB8 /* VentivaderViewController.swift */,
+				D35F4DF724393FA60001FC88 /* VentilatorControlPanelViewController.swift */,
+				D32627EB243A468400CB212A /* BaseVC.swift */,
+				D3B5131B243A7EBB00117C2C /* ConnectingBLEViewController.swift */,
+				D34430412440E8260087EA9B /* LiveDataChartViewController.swift */,
 				4F25632B243988E300CFD2F1 /* VentivaderBluetoothExtensions.swift */,
 			);
 			path = ViewControllers;
@@ -120,6 +191,7 @@
 		BA5DEB7624375E6D006A6BB8 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				D32627E7243A385C00CB212A /* VentilatorParametersManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -134,6 +206,8 @@
 		BA5DEB7924375E98006A6BB8 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				D34430472440F94B0087EA9B /* ColorPallete.swift */,
+				D3E6001824427250007C2F8D /* FontsVentivader.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -150,9 +224,36 @@
 		BA5DEB7B24375EEC006A6BB8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D3E60013244270AA007C2F8D /* Fonts */,
+				D3B5131D243A7F8500117C2C /* Animations */,
 				BA5DEB5A24374C9F006A6BB8 /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		D35F4DF9243944830001FC88 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				D35F4DFA243944D50001FC88 /* VentilatorControlPanelViewModel.swift */,
+				D344304B24412BB90087EA9B /* LiveDataChartViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		D3B5131D243A7F8500117C2C /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				D3B5131E243A815A00117C2C /* bleConnectingAnimation.gif */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		D3E60013244270AA007C2F8D /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				D3E60015244270D7007C2F8D /* ONEDAY.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,6 +263,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BA5DEB6D24374C9F006A6BB8 /* Build configuration list for PBXNativeTarget "Ventivader" */;
 			buildPhases = (
+				1A0E535ED780E23B5EEB1029 /* [CP] Check Pods Manifest.lock */,
 				BA5DEB4C24374C9C006A6BB8 /* Sources */,
 				BA5DEB4D24374C9C006A6BB8 /* Frameworks */,
 				BA5DEB4E24374C9C006A6BB8 /* Resources */,
@@ -179,6 +281,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BA5DEB7024374C9F006A6BB8 /* Build configuration list for PBXNativeTarget "VentivaderTests" */;
 			buildPhases = (
+				F7FA8D7ED3BDE7E63F27F2A1 /* [CP] Check Pods Manifest.lock */,
 				BA5DEB6024374C9F006A6BB8 /* Sources */,
 				BA5DEB6124374C9F006A6BB8 /* Frameworks */,
 				BA5DEB6224374C9F006A6BB8 /* Resources */,
@@ -238,6 +341,10 @@
 			files = (
 				BA5DEB5E24374C9F006A6BB8 /* LaunchScreen.storyboard in Resources */,
 				BA5DEB5B24374C9F006A6BB8 /* Assets.xcassets in Resources */,
+				D35F4DFF24395A310001FC88 /* VentilatorParameterTileView.xib in Resources */,
+				D35F4E07243972000001FC88 /* VentilatorStatusView.xib in Resources */,
+				D3B5131F243A815A00117C2C /* bleConnectingAnimation.gif in Resources */,
+				D3E60017244270D7007C2F8D /* ONEDAY.ttf in Resources */,
 				BA5DEB5924374C9C006A6BB8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -251,14 +358,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1A0E535ED780E23B5EEB1029 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Ventivader-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F7FA8D7ED3BDE7E63F27F2A1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VentivaderTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BA5DEB4C24374C9C006A6BB8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D34430422440E8260087EA9B /* LiveDataChartViewController.swift in Sources */,
+				D35F4DF824393FA60001FC88 /* VentilatorControlPanelViewController.swift in Sources */,
+				D32627EC243A468400CB212A /* BaseVC.swift in Sources */,
+				D344304C24412BB90087EA9B /* LiveDataChartViewModel.swift in Sources */,
+				D34430482440F94B0087EA9B /* ColorPallete.swift in Sources */,
+				D35F4DFB243944D50001FC88 /* VentilatorControlPanelViewModel.swift in Sources */,
 				4F25632C243988E300CFD2F1 /* VentivaderBluetoothExtensions.swift in Sources */,
 				BA5DEB5624374C9C006A6BB8 /* VentivaderViewController.swift in Sources */,
+				D32627E8243A385C00CB212A /* VentilatorParametersManager.swift in Sources */,
 				BA5DEB5424374C9C006A6BB8 /* AppDelegate.swift in Sources */,
+				D35F4E01243971BC0001FC88 /* VentilatorStatusView.swift in Sources */,
+				D3B5131C243A7EBB00117C2C /* ConnectingBLEViewController.swift in Sources */,
+				D3E6001924427250007C2F8D /* FontsVentivader.swift in Sources */,
+				D35F4DFD243949E80001FC88 /* VentilatorParameterTileView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +575,7 @@
 		};
 		BA5DEB6E24374C9F006A6BB8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F3A277B319484632BB8E2A3 /* Pods-Ventivader.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -437,6 +595,7 @@
 		};
 		BA5DEB6F24374C9F006A6BB8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A5044DD0588C01F4A3195C6 /* Pods-Ventivader.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -456,6 +615,7 @@
 		};
 		BA5DEB7124374C9F006A6BB8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE0842B19478DF756AD78A19 /* Pods-VentivaderTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -477,6 +637,7 @@
 		};
 		BA5DEB7224374C9F006A6BB8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F7B7BCEF53F51C3168841604 /* Pods-VentivaderTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
