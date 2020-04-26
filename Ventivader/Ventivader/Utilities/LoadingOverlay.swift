@@ -30,26 +30,10 @@ public class LoadingOverlay {
         containerView.addSubview(animationView)
         containerView.addSubview(titleLabel)
         
-        animationView.translatesAutoresizingMaskIntoConstraints = false
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
         
-        // Animation View constraints
-        NSLayoutConstraint.activate([
-            animationView.centerXAnchor.constraint(equalTo: containerView.centerXAnchor),
-            animationView.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 16),
-            animationView.widthAnchor.constraint(equalTo: containerView.widthAnchor, multiplier: 0.5),
-            animationView.widthAnchor.constraint(equalTo: animationView.heightAnchor),
-        ])
-        
-        // Title View constraints
-        NSLayoutConstraint.activate([
-            titleLabel.centerXAnchor.constraint(equalTo: containerView.centerXAnchor),
-            titleLabel.topAnchor.constraint(equalTo: animationView.bottomAnchor, constant: 16),
-            titleLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
-            titleLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
-        ])
-        
-        containerView.layer.cornerRadius = 16
+        applyContraints(containerView: containerView,
+                        animationView: animationView,
+                        titleLabel: titleLabel)
         
         return containerView
     }()
@@ -76,6 +60,31 @@ public class LoadingOverlay {
     
     func removeLoadingOverlayView() {
         overlayView.removeFromSuperview()
+    }
+    
+    private func applyContraints(containerView: UIView,
+                                 animationView: UIView,
+                                 titleLabel: UIView) {
+        animationView.translatesAutoresizingMaskIntoConstraints = false
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        // Animation View constraints
+        NSLayoutConstraint.activate([
+            animationView.centerXAnchor.constraint(equalTo: containerView.centerXAnchor),
+            animationView.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 16),
+            animationView.widthAnchor.constraint(equalTo: containerView.widthAnchor, multiplier: 0.5),
+            animationView.widthAnchor.constraint(equalTo: animationView.heightAnchor),
+        ])
+        
+        // Title View constraints
+        NSLayoutConstraint.activate([
+            titleLabel.centerXAnchor.constraint(equalTo: containerView.centerXAnchor),
+            titleLabel.topAnchor.constraint(equalTo: animationView.bottomAnchor, constant: 16),
+            titleLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
+            titleLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
+        ])
+        
+        containerView.layer.cornerRadius = 16
     }
 }
 

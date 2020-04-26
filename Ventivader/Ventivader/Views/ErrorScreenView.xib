@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ErrorScreenView" customModule="Ventivader" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SKJ-Cc-ySC">
+                    <rect key="frame" x="0.0" y="44" width="414" height="448"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pEw-JH-IJO">
+                            <rect key="frame" x="52" y="32" width="310.5" height="310.5"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="pEw-JH-IJO" secondAttribute="height" multiplier="1:1" id="Ycw-l6-oSG"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="pEw-JH-IJO" firstAttribute="top" secondItem="SKJ-Cc-ySC" secondAttribute="top" constant="32" id="6fT-Fe-tZL"/>
+                        <constraint firstItem="pEw-JH-IJO" firstAttribute="centerX" secondItem="SKJ-Cc-ySC" secondAttribute="centerX" id="Yno-0x-7d6"/>
+                    </constraints>
+                </view>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="errorWave" translatesAutoresizingMaskIntoConstraints="NO" id="wmD-Bj-tAA">
+                    <rect key="frame" x="0.0" y="492" width="414" height="134.5"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Aor-xx-3qB">
+                    <rect key="frame" x="16" y="642.5" width="382" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Body" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y52-f5-Pe8">
+                    <rect key="frame" x="16" y="680.5" width="382" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WO8-45-XZK">
+                    <rect key="frame" x="184" y="717" width="46" height="30"/>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="topButtonTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="CMx-Zy-CDr"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="pEw-JH-IJO" firstAttribute="width" secondItem="vUN-kp-3ea" secondAttribute="width" multiplier="0.75" id="13V-y6-Iyf"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Aor-xx-3qB" secondAttribute="trailing" constant="16" id="4Ue-7E-eO3"/>
+                <constraint firstItem="WO8-45-XZK" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="5Rg-Mc-xub"/>
+                <constraint firstItem="SKJ-Cc-ySC" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.5" id="84q-zN-Loc"/>
+                <constraint firstItem="Aor-xx-3qB" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="CIH-rt-7gR"/>
+                <constraint firstItem="y52-f5-Pe8" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="JVb-r5-ZuR"/>
+                <constraint firstItem="y52-f5-Pe8" firstAttribute="top" secondItem="Aor-xx-3qB" secondAttribute="bottom" constant="8" id="Jps-gf-zke"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="y52-f5-Pe8" secondAttribute="trailing" constant="16" id="KaV-rR-Pyg"/>
+                <constraint firstItem="y52-f5-Pe8" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="O0F-Iz-E8B"/>
+                <constraint firstItem="wmD-Bj-tAA" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.15" id="QY3-77-D55"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="wmD-Bj-tAA" secondAttribute="trailing" id="Qny-bo-ll5"/>
+                <constraint firstItem="wmD-Bj-tAA" firstAttribute="top" secondItem="SKJ-Cc-ySC" secondAttribute="bottom" id="Ruj-Co-ZSu"/>
+                <constraint firstItem="Aor-xx-3qB" firstAttribute="top" secondItem="wmD-Bj-tAA" secondAttribute="bottom" constant="16" id="WOC-xB-1h1"/>
+                <constraint firstItem="Aor-xx-3qB" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="WTL-TA-gGd"/>
+                <constraint firstItem="wmD-Bj-tAA" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Wci-w8-8vd"/>
+                <constraint firstItem="SKJ-Cc-ySC" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="YZy-RO-OcE"/>
+                <constraint firstItem="SKJ-Cc-ySC" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="gle-OA-J0f"/>
+                <constraint firstItem="WO8-45-XZK" firstAttribute="top" secondItem="y52-f5-Pe8" secondAttribute="bottom" constant="16" id="nvB-wb-Pni"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="SKJ-Cc-ySC" secondAttribute="trailing" id="rVo-La-XMV"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="backgroundView" destination="SKJ-Cc-ySC" id="VBC-9t-Xak"/>
+                <outlet property="bodyLabel" destination="y52-f5-Pe8" id="BL6-Xs-Ruu"/>
+                <outlet property="imageView" destination="pEw-JH-IJO" id="dcf-7E-JIS"/>
+                <outlet property="titleLabel" destination="Aor-xx-3qB" id="Pcv-Jv-vNm"/>
+                <outlet property="topButton" destination="WO8-45-XZK" id="Vb1-MZ-F4H"/>
+            </connections>
+            <point key="canvasLocation" x="-74" y="133"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="errorWave" width="240" height="78"/>
+    </resources>
+</document>

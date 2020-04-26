@@ -47,15 +47,6 @@ class LiveDataChartViewController: UIViewController {
         invalidateTimer()
     }
     
-    func startDataFlow() {
-        DispatchQueue.main.async { [weak self] in
-            self?.timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { [weak self] _ in
-                self?.dataSet.append(Double.random(in: 0.0 ..< 20.0))
-                self?.updateChart()
-            }
-        }
-    }
-    
     func addToChart(newValue: Double){
         dataSet.append(newValue)
         updateChart()

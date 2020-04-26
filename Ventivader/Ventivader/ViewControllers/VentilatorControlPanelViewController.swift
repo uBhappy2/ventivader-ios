@@ -129,26 +129,18 @@ class VentilatorControlPanelViewController: UIViewController {
     }
     
     private func showBLEDisabledErrorScreen() {
-        let imageView = UIImageView()
-        imageView.loadGif(name: "turnBleOn")
-        imageView.contentMode = .scaleAspectFit
-        
         errorProvider.showError(inView: view,
                                title: NSLocalizedString("Turn On Bluetooth", comment: "Error screen title"),
                                body: NSLocalizedString("You need to turn on Bluetooth to pair with VentiVader", comment: "Error screen body"),
-                               imageView: imageView)
+                               gifName: "turnBleOn")
     }
     
     private func showBLEUnauthorizedScreen() {
-        let imageView = UIImageView()
-        imageView.contentMode = .scaleAspectFit
-        imageView.loadGif(name: "blePermissions")
-        
         errorProvider.showError(inView: view,
                                 title: NSLocalizedString("Bluetooth Permissions Required", comment: "Error screen title"),
                                 body: NSLocalizedString("You need to give us permission to use your Bluetooth to pair with Ventivader", comment: "Error screen body"),
                                 buttonTitle: NSLocalizedString("Go to Settings", comment: "Buttton in ventilator BLE permission was not granted"),
-                                imageView: imageView,
+                                gifName: "blePermissions",
                                 actionButtonTapClosure: {
                                     if let appSettingsURL = URL(string: UIApplication.openSettingsURLString), UIApplication.shared.canOpenURL(appSettingsURL) {
                                         UIApplication.shared.open(appSettingsURL)
@@ -157,15 +149,11 @@ class VentilatorControlPanelViewController: UIViewController {
     }
     
     private func showBLENotFound() {
-        let imageView = UIImageView()
-        imageView.loadGif(name: "ventivaderAnimated")
-        imageView.contentMode = .scaleAspectFit
-        
         errorProvider.showError(inView: view,
                                title: NSLocalizedString("Ventivader not found", comment: "Error screen title"),
                                body: NSLocalizedString("Make sure the ventilator is on.\n Make sure the ventialor is about 3 fts close.", comment: "Error screen body"),
                                buttonTitle: NSLocalizedString("Try Again", comment: "Buttton in ventilator not found error screen"),
-                               imageView: imageView,
+                               gifName: "ventivaderAnimated",
                                actionButtonTapClosure: { [weak self] in
                                 self?.errorProvider.dismissCurrentErorView()
         })
