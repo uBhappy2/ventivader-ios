@@ -10,10 +10,12 @@ import UIKit
 
 class VentivaderFonts {
     static let titleFont = "ONEDAY"
+    static let bodyFont = "OpenSans-Regular"
 }
 
 extension UILabel {
-    func updateFontOnly(name: String){
-        self.font = UIFont(name: name, size: self.font.pointSize)
+    func updateFont(name: String, size: CGFloat? = nil){
+        let fontSize = size ?? font.pointSize
+        self.font = UIFont(name: name, size: fontSize)
     }
 }

@@ -16,7 +16,11 @@ class VentilatorControlPanelViewController: UIViewController {
     @IBOutlet var titleView: UIView!
 
     private let viewModel = VentilatorControlPanelViewModel()
-    private var ventialorParametersCollectionView: UICollectionView?
+    private let errorProvider = ErrorScreenProvider()
+    
+    private var liveDataChartVCs: [LiveDataChartViewController] {
+        return children.compactMap { $0 as? LiveDataChartViewController }
+    }
 
     // MARK: - ViewController Life Cycle
     
@@ -25,28 +29,34 @@ class VentilatorControlPanelViewController: UIViewController {
         setupTitleView()
         setupPlots()
         setupStatusViews()
-        setupParameters()
+        setupParametersControlPanel()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        ventialorParametersCollectionView?.reloadData()
-        let alertController = UIAlertController(title: "Ventilator",
-                                                message:
-                                                "BLE connected?",
-                                                preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "Yes", style: .default))
-        alertController.addAction(UIAlertAction(title: "No", style: .default, handler: { [weak self] _ in
-            DispatchQueue.main.async { [weak self] in
-                self?.performSegue(withIdentifier: "connectBLEFromControlPanel", sender: self)
-            }
-        }))
         
-        present(alertController, animated: true, completion: nil)
+        navigationController?.setNavigationBarHidden(true, animated: true)
+        
+        let overlay = LoadingOverlay()
+        overlay.showOverlay(inView: view)
+        
+        viewModel.connectBLE(bleOff: { [weak self] in
+            self?.showBLEDisabledErrorScreen()
+        },bleUnauthorizedClosure: { [weak self] in
+            self?.showBLEUnauthorizedScreen()
+        }, deviceFound: {
+            overlay.removeLoadingOverlayView()
+        }, deviceNotFound: {  [weak self] in
+            self?.showBLENotFound()
+        }, valueUpdatedClosure: { [weak self] receivedData  in
+            if let json = try? JSONSerialization.jsonObject(with: receivedData, options: []),
+               let jsonDictionaty = json as? [String: Double] {
+                self?.updateCharts(withJson: jsonDictionaty)
+            }
+        })
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
         if  let chartVC = segue.destination as? LiveDataChartViewController {
             switch segue.identifier {
             case "pressureChartSegue":
@@ -65,6 +75,7 @@ class VentilatorControlPanelViewController: UIViewController {
     
     private func setupPlots() {
         plotsStackView.backgroundColor = ColorPallete.backgroundColor
+        liveDataChartVCs.forEach { $0.stopDataFlow() }
     }
     
     private func setupStatusViews() {
@@ -92,11 +103,11 @@ class VentilatorControlPanelViewController: UIViewController {
         titleView.subviews.forEach {
             let label = $0 as? UILabel
             label?.textColor = ColorPallete.highlightColor
-            label?.updateFontOnly(name: VentivaderFonts.titleFont)
+            label?.updateFont(name: VentivaderFonts.titleFont)
         }
     }
     
-    private func setupParameters() {
+    private func setupParametersControlPanel() {
         controlPanelStackView.addBackground(color: ColorPallete.backgroundColor)
         let parametersViews: [VentilatorParameterTileView] = viewModel.ventilatorParameters.map { parameter in
             let ventilatorParameterView = VentilatorParameterTileView.instanceFromNib()
@@ -116,6 +127,47 @@ class VentilatorControlPanelViewController: UIViewController {
             stackView.addBackground(color: ColorPallete.backgroundColor)
         }
     }
+    
+    private func showBLEDisabledErrorScreen() {
+        errorProvider.showError(inView: view,
+                               title: NSLocalizedString("Turn On Bluetooth", comment: "Error screen title"),
+                               body: NSLocalizedString("You need to turn on Bluetooth to pair with VentiVader", comment: "Error screen body"),
+                               gifName: "turnBleOn")
+    }
+    
+    private func showBLEUnauthorizedScreen() {
+        errorProvider.showError(inView: view,
+                                title: NSLocalizedString("Bluetooth Permissions Required", comment: "Error screen title"),
+                                body: NSLocalizedString("You need to give us permission to use your Bluetooth to pair with Ventivader", comment: "Error screen body"),
+                                buttonTitle: NSLocalizedString("Go to Settings", comment: "Buttton in ventilator BLE permission was not granted"),
+                                gifName: "blePermissions",
+                                actionButtonTapClosure: {
+                                    if let appSettingsURL = URL(string: UIApplication.openSettingsURLString), UIApplication.shared.canOpenURL(appSettingsURL) {
+                                        UIApplication.shared.open(appSettingsURL)
+                                    }
+        })
+    }
+    
+    private func showBLENotFound() {
+        errorProvider.showError(inView: view,
+                               title: NSLocalizedString("Ventivader not found", comment: "Error screen title"),
+                               body: NSLocalizedString("Make sure the ventilator is on.\n Make sure the ventialor is about 3 fts close.", comment: "Error screen body"),
+                               buttonTitle: NSLocalizedString("Try Again", comment: "Buttton in ventilator not found error screen"),
+                               gifName: "ventivaderAnimated",
+                               actionButtonTapClosure: { [weak self] in
+                                self?.errorProvider.dismissCurrentErorView()
+        })
+    }
+    
+    private func updateCharts(withJson json: [String:Double]) {
+        liveDataChartVCs.forEach { vc in
+            if  let key = vc.viewModel.chartType?.rawValue,
+                let newValue = json[key] {
+                vc.addToChart(newValue: newValue)
+            }
+        }
+    }
+    
 }
 
 extension UIStackView {

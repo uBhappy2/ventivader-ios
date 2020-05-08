@@ -27,10 +27,21 @@
 		D35F4DFF24395A310001FC88 /* VentilatorParameterTileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D35F4DFE24395A310001FC88 /* VentilatorParameterTileView.xib */; };
 		D35F4E01243971BC0001FC88 /* VentilatorStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35F4E00243971BC0001FC88 /* VentilatorStatusView.swift */; };
 		D35F4E07243972000001FC88 /* VentilatorStatusView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D35F4E06243972000001FC88 /* VentilatorStatusView.xib */; };
-		D3B5131C243A7EBB00117C2C /* ConnectingBLEViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B5131B243A7EBB00117C2C /* ConnectingBLEViewController.swift */; };
+		D393E7C02453778400555BBD /* turnBleOn.gif in Resources */ = {isa = PBXBuildFile; fileRef = D393E7BD2453778400555BBD /* turnBleOn.gif */; };
+		D393E7C12453778400555BBD /* ventivaderAnimated.gif in Resources */ = {isa = PBXBuildFile; fileRef = D393E7BE2453778400555BBD /* ventivaderAnimated.gif */; };
+		D393E7C22453778400555BBD /* blePermissions.gif in Resources */ = {isa = PBXBuildFile; fileRef = D393E7BF2453778400555BBD /* blePermissions.gif */; };
+		D393E7D22453801500555BBD /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D393E7C82453801500555BBD /* OpenSans-Regular.ttf */; };
+		D393E7D62453801500555BBD /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D393E7CC2453801500555BBD /* OpenSans-Bold.ttf */; };
+		D393E7D72453801500555BBD /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D393E7CD2453801500555BBD /* OpenSans-Light.ttf */; };
+		D393E7D82453801500555BBD /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D393E7CE2453801500555BBD /* OpenSans-Italic.ttf */; };
 		D3B5131F243A815A00117C2C /* bleConnectingAnimation.gif in Resources */ = {isa = PBXBuildFile; fileRef = D3B5131E243A815A00117C2C /* bleConnectingAnimation.gif */; };
+		D3C12D51244BE4FE00E0E7A9 /* BLEManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C12D50244BE4FE00E0E7A9 /* BLEManager.swift */; };
+		D3C12D53244CB92000E0E7A9 /* LoadingOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C12D52244CB92000E0E7A9 /* LoadingOverlay.swift */; };
+		D3C12D55244CC36D00E0E7A9 /* ErrorScreenProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C12D54244CC36D00E0E7A9 /* ErrorScreenProvider.swift */; };
 		D3E60017244270D7007C2F8D /* ONEDAY.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D3E60015244270D7007C2F8D /* ONEDAY.ttf */; };
 		D3E6001924427250007C2F8D /* FontsVentivader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E6001824427250007C2F8D /* FontsVentivader.swift */; };
+		D3EAFB172455E1280027379D /* ErrorScreenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3EAFB162455E1280027379D /* ErrorScreenView.xib */; };
+		D3EAFB1B2455F3B40027379D /* ErrorScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EAFB182455E27F0027379D /* ErrorScreenView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,14 +77,25 @@
 		D344304B24412BB90087EA9B /* LiveDataChartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveDataChartViewModel.swift; sourceTree = "<group>"; };
 		D35F4DF724393FA60001FC88 /* VentilatorControlPanelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VentilatorControlPanelViewController.swift; sourceTree = "<group>"; };
 		D35F4DFA243944D50001FC88 /* VentilatorControlPanelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VentilatorControlPanelViewModel.swift; sourceTree = "<group>"; };
-		D35F4DFC243949E80001FC88 /* VentilatorParameterTileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VentilatorParameterTileView.swift; path = Ventivader/ViewModels/VentilatorParameterTileView.swift; sourceTree = SOURCE_ROOT; };
-		D35F4DFE24395A310001FC88 /* VentilatorParameterTileView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = VentilatorParameterTileView.xib; path = Ventivader/ViewModels/VentilatorParameterTileView.xib; sourceTree = SOURCE_ROOT; };
-		D35F4E00243971BC0001FC88 /* VentilatorStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VentilatorStatusView.swift; path = Ventivader/ViewModels/VentilatorStatusView.swift; sourceTree = SOURCE_ROOT; };
-		D35F4E06243972000001FC88 /* VentilatorStatusView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = VentilatorStatusView.xib; path = Ventivader/ViewModels/VentilatorStatusView.xib; sourceTree = SOURCE_ROOT; };
-		D3B5131B243A7EBB00117C2C /* ConnectingBLEViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectingBLEViewController.swift; sourceTree = "<group>"; };
+		D35F4DFC243949E80001FC88 /* VentilatorParameterTileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VentilatorParameterTileView.swift; path = Ventivader/Views/VentilatorParameterTileView.swift; sourceTree = SOURCE_ROOT; };
+		D35F4DFE24395A310001FC88 /* VentilatorParameterTileView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = VentilatorParameterTileView.xib; path = Ventivader/Views/VentilatorParameterTileView.xib; sourceTree = SOURCE_ROOT; };
+		D35F4E00243971BC0001FC88 /* VentilatorStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VentilatorStatusView.swift; path = Ventivader/Views/VentilatorStatusView.swift; sourceTree = SOURCE_ROOT; };
+		D35F4E06243972000001FC88 /* VentilatorStatusView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = VentilatorStatusView.xib; path = Ventivader/Views/VentilatorStatusView.xib; sourceTree = SOURCE_ROOT; };
+		D393E7BD2453778400555BBD /* turnBleOn.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = turnBleOn.gif; sourceTree = "<group>"; };
+		D393E7BE2453778400555BBD /* ventivaderAnimated.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = ventivaderAnimated.gif; sourceTree = "<group>"; };
+		D393E7BF2453778400555BBD /* blePermissions.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = blePermissions.gif; sourceTree = "<group>"; };
+		D393E7C82453801500555BBD /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		D393E7CC2453801500555BBD /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		D393E7CD2453801500555BBD /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		D393E7CE2453801500555BBD /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Italic.ttf"; sourceTree = "<group>"; };
 		D3B5131E243A815A00117C2C /* bleConnectingAnimation.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = bleConnectingAnimation.gif; sourceTree = "<group>"; };
+		D3C12D50244BE4FE00E0E7A9 /* BLEManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEManager.swift; sourceTree = "<group>"; };
+		D3C12D52244CB92000E0E7A9 /* LoadingOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoadingOverlay.swift; path = Ventivader/Utilities/LoadingOverlay.swift; sourceTree = SOURCE_ROOT; };
+		D3C12D54244CC36D00E0E7A9 /* ErrorScreenProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorScreenProvider.swift; sourceTree = "<group>"; };
 		D3E60015244270D7007C2F8D /* ONEDAY.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ONEDAY.ttf; sourceTree = "<group>"; };
 		D3E6001824427250007C2F8D /* FontsVentivader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontsVentivader.swift; sourceTree = "<group>"; };
+		D3EAFB162455E1280027379D /* ErrorScreenView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ErrorScreenView.xib; path = Ventivader/Views/ErrorScreenView.xib; sourceTree = SOURCE_ROOT; };
+		D3EAFB182455E27F0027379D /* ErrorScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ErrorScreenView.swift; path = Ventivader/Views/ErrorScreenView.swift; sourceTree = SOURCE_ROOT; };
 		EE0842B19478DF756AD78A19 /* Pods-VentivaderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VentivaderTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VentivaderTests/Pods-VentivaderTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F7B7BCEF53F51C3168841604 /* Pods-VentivaderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VentivaderTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VentivaderTests/Pods-VentivaderTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -149,7 +171,7 @@
 				D35F4DF9243944830001FC88 /* ViewModels */,
 				BA5DEB7724375E77006A6BB8 /* Services */,
 				BA5DEB7424375E49006A6BB8 /* ViewControllers */,
-				BA5DEB7324375E39006A6BB8 /* Views */,
+				D3EAFB1A2455E2B80027379D /* Views */,
 				BA5DEB7924375E98006A6BB8 /* Utilities */,
 			);
 			path = Ventivader;
@@ -164,24 +186,12 @@
 			path = VentivaderTests;
 			sourceTree = "<group>";
 		};
-		BA5DEB7324375E39006A6BB8 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				D35F4DFC243949E80001FC88 /* VentilatorParameterTileView.swift */,
-				D35F4DFE24395A310001FC88 /* VentilatorParameterTileView.xib */,
-				D35F4E00243971BC0001FC88 /* VentilatorStatusView.swift */,
-				D35F4E06243972000001FC88 /* VentilatorStatusView.xib */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		BA5DEB7424375E49006A6BB8 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				BA5DEB5524374C9C006A6BB8 /* VentivaderViewController.swift */,
 				D35F4DF724393FA60001FC88 /* VentilatorControlPanelViewController.swift */,
 				D32627EB243A468400CB212A /* BaseVC.swift */,
-				D3B5131B243A7EBB00117C2C /* ConnectingBLEViewController.swift */,
 				D34430412440E8260087EA9B /* LiveDataChartViewController.swift */,
 				4F25632B243988E300CFD2F1 /* VentivaderBluetoothExtensions.swift */,
 			);
@@ -192,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				D32627E7243A385C00CB212A /* VentilatorParametersManager.swift */,
+				D3C12D50244BE4FE00E0E7A9 /* BLEManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -206,8 +217,10 @@
 		BA5DEB7924375E98006A6BB8 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				D3C12D52244CB92000E0E7A9 /* LoadingOverlay.swift */,
 				D34430472440F94B0087EA9B /* ColorPallete.swift */,
 				D3E6001824427250007C2F8D /* FontsVentivader.swift */,
+				D3C12D54244CC36D00E0E7A9 /* ErrorScreenProvider.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -240,9 +253,23 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		D393E7C524537FEC00555BBD /* OpenSans */ = {
+			isa = PBXGroup;
+			children = (
+				D393E7CC2453801500555BBD /* OpenSans-Bold.ttf */,
+				D393E7CE2453801500555BBD /* OpenSans-Italic.ttf */,
+				D393E7CD2453801500555BBD /* OpenSans-Light.ttf */,
+				D393E7C82453801500555BBD /* OpenSans-Regular.ttf */,
+			);
+			path = OpenSans;
+			sourceTree = "<group>";
+		};
 		D3B5131D243A7F8500117C2C /* Animations */ = {
 			isa = PBXGroup;
 			children = (
+				D393E7BF2453778400555BBD /* blePermissions.gif */,
+				D393E7BD2453778400555BBD /* turnBleOn.gif */,
+				D393E7BE2453778400555BBD /* ventivaderAnimated.gif */,
 				D3B5131E243A815A00117C2C /* bleConnectingAnimation.gif */,
 			);
 			path = Animations;
@@ -251,9 +278,23 @@
 		D3E60013244270AA007C2F8D /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				D393E7C524537FEC00555BBD /* OpenSans */,
 				D3E60015244270D7007C2F8D /* ONEDAY.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		D3EAFB1A2455E2B80027379D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D35F4DFC243949E80001FC88 /* VentilatorParameterTileView.swift */,
+				D35F4DFE24395A310001FC88 /* VentilatorParameterTileView.xib */,
+				D35F4E00243971BC0001FC88 /* VentilatorStatusView.swift */,
+				D35F4E06243972000001FC88 /* VentilatorStatusView.xib */,
+				D3EAFB162455E1280027379D /* ErrorScreenView.xib */,
+				D3EAFB182455E27F0027379D /* ErrorScreenView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -341,10 +382,18 @@
 			files = (
 				BA5DEB5E24374C9F006A6BB8 /* LaunchScreen.storyboard in Resources */,
 				BA5DEB5B24374C9F006A6BB8 /* Assets.xcassets in Resources */,
+				D393E7D62453801500555BBD /* OpenSans-Bold.ttf in Resources */,
+				D3EAFB172455E1280027379D /* ErrorScreenView.xib in Resources */,
+				D393E7C02453778400555BBD /* turnBleOn.gif in Resources */,
+				D393E7D72453801500555BBD /* OpenSans-Light.ttf in Resources */,
 				D35F4DFF24395A310001FC88 /* VentilatorParameterTileView.xib in Resources */,
 				D35F4E07243972000001FC88 /* VentilatorStatusView.xib in Resources */,
+				D393E7D82453801500555BBD /* OpenSans-Italic.ttf in Resources */,
+				D393E7C22453778400555BBD /* blePermissions.gif in Resources */,
 				D3B5131F243A815A00117C2C /* bleConnectingAnimation.gif in Resources */,
 				D3E60017244270D7007C2F8D /* ONEDAY.ttf in Resources */,
+				D393E7C12453778400555BBD /* ventivaderAnimated.gif in Resources */,
+				D393E7D22453801500555BBD /* OpenSans-Regular.ttf in Resources */,
 				BA5DEB5924374C9C006A6BB8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -403,6 +452,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D34430422440E8260087EA9B /* LiveDataChartViewController.swift in Sources */,
+				D3EAFB1B2455F3B40027379D /* ErrorScreenView.swift in Sources */,
 				D35F4DF824393FA60001FC88 /* VentilatorControlPanelViewController.swift in Sources */,
 				D32627EC243A468400CB212A /* BaseVC.swift in Sources */,
 				D344304C24412BB90087EA9B /* LiveDataChartViewModel.swift in Sources */,
@@ -410,10 +460,12 @@
 				D35F4DFB243944D50001FC88 /* VentilatorControlPanelViewModel.swift in Sources */,
 				4F25632C243988E300CFD2F1 /* VentivaderBluetoothExtensions.swift in Sources */,
 				BA5DEB5624374C9C006A6BB8 /* VentivaderViewController.swift in Sources */,
+				D3C12D55244CC36D00E0E7A9 /* ErrorScreenProvider.swift in Sources */,
+				D3C12D53244CB92000E0E7A9 /* LoadingOverlay.swift in Sources */,
+				D3C12D51244BE4FE00E0E7A9 /* BLEManager.swift in Sources */,
 				D32627E8243A385C00CB212A /* VentilatorParametersManager.swift in Sources */,
 				BA5DEB5424374C9C006A6BB8 /* AppDelegate.swift in Sources */,
 				D35F4E01243971BC0001FC88 /* VentilatorStatusView.swift in Sources */,
-				D3B5131C243A7EBB00117C2C /* ConnectingBLEViewController.swift in Sources */,
 				D3E6001924427250007C2F8D /* FontsVentivader.swift in Sources */,
 				D35F4DFD243949E80001FC88 /* VentilatorParameterTileView.swift in Sources */,
 			);

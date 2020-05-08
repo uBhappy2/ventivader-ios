@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum VentilatorChartLiveDataType {
+enum VentilatorChartLiveDataType: String {
     case pressure, volume, flow
     
     var title: String {
@@ -19,8 +19,6 @@ enum VentilatorChartLiveDataType {
             return NSLocalizedString("Volume", comment: "Chart Label")
         case .flow:
             return NSLocalizedString("Flow", comment: "Chart Label")
-        default:
-            return ""
         }
     }
 }

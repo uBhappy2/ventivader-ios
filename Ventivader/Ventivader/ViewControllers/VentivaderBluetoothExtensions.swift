@@ -10,8 +10,12 @@ import Foundation
 import CoreBluetooth
 
 struct BLEProperties {
-    static let serviceUUID: CBUUID = CBUUID(string: "6e400001-b5a3-f393-e0a9-e50e24dcca9e")
+    static let uartServiceUUID: CBUUID = CBUUID(string: "6e400001-b5a3-f393-e0a9-e50e24dcca9e")
     static let solenoidParamsUUID: CBUUID = CBUUID(string: "6e400002-b5a3-f393-e0a9-e50e24dcca9e")
+    struct Characteristics {
+        static let uartTX = CBUUID(string: "6e400002-b5a3-f393-e0a9-e50e24dcca9e")//(Property = Write without response)
+        static let uartRX = CBUUID(string: "6e400003-b5a3-f393-e0a9-e50e24dcca9e")// (Property = Read/Notify)
+    }
 }
 
 extension VentivaderViewController: CBCentralManagerDelegate {
@@ -29,7 +33,7 @@ extension VentivaderViewController: CBCentralManagerDelegate {
             print("central.state is .poweredOff")
           case .poweredOn:
             print("central.state is .poweredOn")
-            centralManager?.scanForPeripherals(withServices: [BLEProperties.serviceUUID], options:nil)
+            centralManager?.scanForPeripherals(withServices: [BLEProperties.uartServiceUUID], options:nil)
         }
     }
     
@@ -52,7 +56,7 @@ extension VentivaderViewController: CBPeripheralDelegate {
     func peripheral(_ peripheral: CBPeripheral, didDiscoverServices error: Error?) {
         guard let services = peripheral.services else { return }
         for service in services {
-            if service.uuid == BLEProperties.serviceUUID {
+            if service.uuid == BLEProperties.uartServiceUUID {
                 peripheral.discoverCharacteristics(nil, for: service)
             }
         }

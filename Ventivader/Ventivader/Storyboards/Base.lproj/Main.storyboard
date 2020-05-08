@@ -329,11 +329,41 @@
                         <outlet property="titleView" destination="ITi-IX-rh6" id="BHf-Ne-4XL"/>
                         <outlet property="ventilatorStatusView" destination="4vK-8K-2ed" id="2Ru-RP-DQ0"/>
                         <segue destination="1cS-VV-hwu" kind="show" identifier="connectBLEFromControlPanel" id="HAu-zi-mNE"/>
+                        <segue destination="9uk-Lj-BOD" kind="show" identifier="bleNonAuthorizedFromControlPanel" id="fq1-JY-tdt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t0B-IC-bCH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1528.7769784172663" y="-699.28057553956842"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Nlg-jj-QwU">
+            <objects>
+                <viewController id="9uk-Lj-BOD" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oCh-DU-Mcx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Eqv-tJ-CAf">
+                                <rect key="frame" x="87" y="120" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Eqv-tJ-CAf" secondAttribute="height" multiplier="1:1" id="YDq-2a-MeZ"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Eqv-tJ-CAf" firstAttribute="centerX" secondItem="oCh-DU-Mcx" secondAttribute="centerX" id="O0Z-ot-5W7"/>
+                            <constraint firstItem="Eqv-tJ-CAf" firstAttribute="top" secondItem="2vr-BJ-01M" secondAttribute="top" constant="32" id="baK-pY-cac"/>
+                            <constraint firstItem="Eqv-tJ-CAf" firstAttribute="width" secondItem="oCh-DU-Mcx" secondAttribute="width" multiplier="0.57971" id="c2J-va-ROj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2vr-BJ-01M"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="edc-gK-Tkg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MD0-At-h1j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2574" y="-699"/>
         </scene>
         <!--Tab Bar View Controller-->
         <scene sceneID="6PC-J6-eft">
