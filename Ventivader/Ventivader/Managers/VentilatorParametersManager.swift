@@ -35,14 +35,20 @@ class VentilatorParameterModel {
 final class VentilatorParametersManager {
     static let shared = VentilatorParametersManager()
 
-    var ventilatorParameters: [VentilatorParameterModel] = [
+    private let patientInfoManager: PatientInformationManager
+
+    init(patientInfoManager: PatientInformationManager = PatientInformationManager.shared) {
+        self.patientInfoManager = patientInfoManager
+    }
+
+    lazy var ventilatorParameters: [VentilatorParameterModel] = [
         VentilatorParameterModel(title: NSLocalizedString("CONTROL MODE", comment: "Control Panel tile title"),
                                  value: NSLocalizedString("AC", comment: "Control Panel tile value"),
                                  headerHighlight: true),
         VentilatorParameterModel(title: NSLocalizedString("PATIENT", comment: "Control Panel tile title"),
-                                 value: "Fake Name",
-                                 leftFooter: "68 yrs",
-                                 rightFooter: "80 kgs",
+                                 value: patientInfoManager.patientInfoModel.name,
+                                 leftFooter: "\(patientInfoManager.patientInfoModel.height)",
+                                 rightFooter: "\(patientInfoManager.patientInfoModel.weight)",
                                  headerHighlight: true),
         VentilatorParameterModel(title: NSLocalizedString("BATTERY", comment: "Control Panel tile title"),
                                  headerHighlight: true),
