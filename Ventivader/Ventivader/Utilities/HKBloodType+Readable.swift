@@ -38,6 +38,4 @@ extension HKBloodType {
             return "Not Set"
         }
     }
-    
-    
 }

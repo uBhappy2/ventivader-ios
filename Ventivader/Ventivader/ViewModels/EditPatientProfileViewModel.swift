@@ -18,7 +18,6 @@ final class EditPatientProfileViewModel {
     
     var dataUpdatedClosure: (() -> Void)?
     
-    
     init(patientInfoManager: PatientInformationManager = PatientInformationManager.shared) {
         self.patientInfoManager = patientInfoManager
     }

@@ -11,7 +11,6 @@ import UIKit
 final class ViewHelper {
     
     func roundProfile(image: UIImageView) {
-
         image.layer.borderWidth = 3
         image.layer.masksToBounds = false
         image.layer.borderColor = ColorPallete.highlightColor.cgColor

@@ -28,8 +28,6 @@ class PatientProfileViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
         setupUI()
     }
     
@@ -42,7 +40,6 @@ class PatientProfileViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? EditPatientProfileViewController {
-            
             vc.viewModel.dataUpdatedClosure = { [weak self] in
                 DispatchQueue.main.async { [weak self] in
                     self?.reloadPatientInfo()
@@ -53,7 +50,6 @@ class PatientProfileViewController: UIViewController {
     // MARK: UI setup
     
     private func setupUI() {
-        
         view.backgroundColor = ColorPallete.backgroundColor
         
         // Edit Button

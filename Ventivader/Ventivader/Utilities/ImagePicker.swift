@@ -12,8 +12,7 @@ public protocol ImagePickerDelegate: class {
     func didSelect(image: UIImage?)
 }
 
-open class ImagePicker: NSObject {
-
+final class ImagePicker: NSObject {
     private let pickerController: UIImagePickerController
     private weak var presentationController: UIViewController?
     private weak var delegate: ImagePickerDelegate?

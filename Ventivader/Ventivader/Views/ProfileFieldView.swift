@@ -87,7 +87,6 @@ final class ProfileFieldView: UIView {
 }
 
 extension ProfileFieldView: UIPickerViewDelegate {
-    
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return pickerViewOptions?[row] ?? ""
     }
@@ -118,7 +117,6 @@ extension ProfileFieldView: UITextFieldDelegate {
 }
 
 extension UITextField {
-
     func setInputViewDatePicker(target: Any, selector: Selector) {
         // Create a UIDatePicker object and assign to inputView
         let screenWidth = UIScreen.main.bounds.width

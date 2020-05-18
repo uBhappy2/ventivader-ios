@@ -18,9 +18,6 @@ class MainTabBarController: UITabBarController {
     }
     
     private func setupTabColors() {
-        //UITabBar.appearance().barTintColor = ColorPallete.backgroundColor
-        //UITabBar.appearance().tintColor = ColorPallete.highlightColor
-        
         tabBar.barTintColor = ColorPallete.backgroundColor
         tabBar.tintColor = ColorPallete.highlightColor
         tabBar.unselectedItemTintColor = ColorPallete.secondaryHighlightColor

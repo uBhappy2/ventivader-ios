@@ -35,7 +35,6 @@ final class EditPatientProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
         setupUI()
         setupKeyboardDismiss()
     }
@@ -150,31 +149,30 @@ final class EditPatientProfileViewController: UIViewController {
         view.endEditing(true)
     }
     
-    @objc func keyboardWillShow( notification: Notification) {
-        if let userInfo = notification.userInfo {
-            let endFrame = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue
-            let endFrameY = endFrame?.origin.y ?? 0
-            let duration:TimeInterval = (userInfo[UIResponder.keyboardAnimationDurationUserInfoKey] as? NSNumber)?.doubleValue ?? 0
-            let animationCurveRawNSN = userInfo[UIResponder.keyboardAnimationCurveUserInfoKey] as? NSNumber
-            let animationCurveRaw = animationCurveRawNSN?.uintValue ?? UIView.AnimationOptions.curveEaseInOut.rawValue
-            let animationCurve:UIView.AnimationOptions = UIView.AnimationOptions(rawValue: animationCurveRaw)
-            
-            if endFrameY >= UIScreen.main.bounds.size.height {
-                self.headerViewHeightConstraint?.constant = 0.0
-            } else {
-                if let expectedHeightMultiplier = self.headerViewHeightConstraint?.multiplier {
-                    self.headerViewHeightConstraint?.constant = -(view.bounds.height * expectedHeightMultiplier) + 2
-                }
+    @objc func keyboardWillShow(notification: Notification) {
+        guard let userInfo = notification.userInfo else { return }
+        let endFrame = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue
+        let endFrameY = endFrame?.origin.y ?? 0
+        let duration: TimeInterval = (userInfo[UIResponder.keyboardAnimationDurationUserInfoKey] as? NSNumber)?.doubleValue ?? 0
+        let animationCurveRawNSN = userInfo[UIResponder.keyboardAnimationCurveUserInfoKey] as? NSNumber
+        let animationCurveRaw = animationCurveRawNSN?.uintValue ?? UIView.AnimationOptions.curveEaseInOut.rawValue
+        let animationCurve: UIView.AnimationOptions = UIView.AnimationOptions(rawValue: animationCurveRaw)
+        
+        if endFrameY >= UIScreen.main.bounds.size.height {
+            headerViewHeightConstraint?.constant = 0.0
+        } else {
+            if let expectedHeightMultiplier = self.headerViewHeightConstraint?.multiplier {
+                headerViewHeightConstraint?.constant = -(view.bounds.height * expectedHeightMultiplier) + 2
             }
-            
-            UIView.animate(withDuration: duration,
-                                       delay: TimeInterval(0),
-                                       options: animationCurve,
-                                       animations: { self.view.layoutIfNeeded() },
-                                       completion: nil)
         }
+        
+        UIView.animate(withDuration: duration,
+                       delay: TimeInterval(0),
+                       options: animationCurve,
+                       animations: { self.view.layoutIfNeeded() },
+                       completion: nil)
     }
-
+    
     deinit {
         NotificationCenter.default.removeObserver(self)
     }
