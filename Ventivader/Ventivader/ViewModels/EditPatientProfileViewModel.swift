@@ -5,12 +5,12 @@
 //  Created by Al on 10/05/20.
 //
 
-import UIKit
 import HealthKit
+import UIKit
 
 final class EditPatientProfileViewModel {
     private var patientInfoManager: PatientInformationManager
-    private  let formatter: DateFormatter = {
+    private let formatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateStyle = .short
         return formatter
@@ -62,15 +62,13 @@ final class EditPatientProfileViewModel {
                          bloodType: HKBloodType,
                          emergencyContactName: String,
                          emergencyContactPhone: String) {
-        
-        
         let heightDouble = Double(height) ?? patientInfoManager.patientInfoModel.height.value
         let weightDouble = Double(weight) ?? patientInfoManager.patientInfoModel.weight.value
         
         let formatter = DateFormatter()
         formatter.dateStyle = .short
-        let birthDateAsDate = formatter.date(from: birthDate)  ?? patientInfoManager.patientInfoModel.birthDate
-
+        let birthDateAsDate = formatter.date(from: birthDate) ?? patientInfoManager.patientInfoModel.birthDate
+        
         patientInfoManager.patientInfoModel = PatientInfo(photo: photo,
                                                           name: name,
                                                           birthDate: birthDateAsDate,

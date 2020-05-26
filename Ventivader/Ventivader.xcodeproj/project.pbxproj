@@ -36,6 +36,8 @@
 		D36CB32224662D5700E5673C /* PatientInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36CB32124662D5700E5673C /* PatientInfoView.swift */; };
 		D36CB32424662D6700E5673C /* PatientInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D36CB32324662D6700E5673C /* PatientInfoView.xib */; };
 		D36CB326246661F900E5673C /* PatientProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36CB325246661F900E5673C /* PatientProfileViewModel.swift */; };
+		D3734627247CAD6600809C1E /* UITextField+DatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3734626247CAD6600809C1E /* UITextField+DatePicker.swift */; };
+		D3734629247CADC900809C1E /* UIStackView+Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3734628247CADC900809C1E /* UIStackView+Background.swift */; };
 		D393E7C02453778400555BBD /* turnBleOn.gif in Resources */ = {isa = PBXBuildFile; fileRef = D393E7BD2453778400555BBD /* turnBleOn.gif */; };
 		D393E7C12453778400555BBD /* ventivaderAnimated.gif in Resources */ = {isa = PBXBuildFile; fileRef = D393E7BE2453778400555BBD /* ventivaderAnimated.gif */; };
 		D393E7C22453778400555BBD /* blePermissions.gif in Resources */ = {isa = PBXBuildFile; fileRef = D393E7BF2453778400555BBD /* blePermissions.gif */; };
@@ -104,6 +106,8 @@
 		D36CB32124662D5700E5673C /* PatientInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientInfoView.swift; sourceTree = "<group>"; };
 		D36CB32324662D6700E5673C /* PatientInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PatientInfoView.xib; sourceTree = "<group>"; };
 		D36CB325246661F900E5673C /* PatientProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientProfileViewModel.swift; sourceTree = "<group>"; };
+		D3734626247CAD6600809C1E /* UITextField+DatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+DatePicker.swift"; sourceTree = "<group>"; };
+		D3734628247CADC900809C1E /* UIStackView+Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Background.swift"; sourceTree = "<group>"; };
 		D393E7BD2453778400555BBD /* turnBleOn.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = turnBleOn.gif; sourceTree = "<group>"; };
 		D393E7BE2453778400555BBD /* ventivaderAnimated.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = ventivaderAnimated.gif; sourceTree = "<group>"; };
 		D393E7BF2453778400555BBD /* blePermissions.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = blePermissions.gif; sourceTree = "<group>"; };
@@ -257,6 +261,8 @@
 				D3970B602467BB3E0036ACBF /* HKBloodType+Readable.swift */,
 				D3970B622467BE6C0036ACBF /* ViewHelper.swift */,
 				D33914832467C78F0023F9FF /* ImagePicker.swift */,
+				D3734626247CAD6600809C1E /* UITextField+DatePicker.swift */,
+				D3734628247CADC900809C1E /* UIStackView+Background.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -522,6 +528,7 @@
 				D3C12D55244CC36D00E0E7A9 /* ErrorScreenProvider.swift in Sources */,
 				D3970B612467BB3E0036ACBF /* HKBloodType+Readable.swift in Sources */,
 				D3C12D53244CB92000E0E7A9 /* LoadingOverlay.swift in Sources */,
+				D3734627247CAD6600809C1E /* UITextField+DatePicker.swift in Sources */,
 				D36CB32024661F8D00E5673C /* PatientInfo.swift in Sources */,
 				D33914862467CB7F0023F9FF /* PatientInformationManager.swift in Sources */,
 				D3C12D51244BE4FE00E0E7A9 /* BLEManager.swift in Sources */,
@@ -529,6 +536,7 @@
 				BA5DEB5424374C9C006A6BB8 /* AppDelegate.swift in Sources */,
 				D36CB326246661F900E5673C /* PatientProfileViewModel.swift in Sources */,
 				D35F4E01243971BC0001FC88 /* VentilatorStatusView.swift in Sources */,
+				D3734629247CADC900809C1E /* UIStackView+Background.swift in Sources */,
 				D3E6001924427250007C2F8D /* FontsVentivader.swift in Sources */,
 				D33914882467CCF30023F9FF /* EditPatientProfileViewModel.swift in Sources */,
 				D35F4DFD243949E80001FC88 /* VentilatorParameterTileView.swift in Sources */,
