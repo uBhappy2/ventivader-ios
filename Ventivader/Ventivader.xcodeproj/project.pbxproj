@@ -18,6 +18,9 @@
 		BA5DEB6924374C9F006A6BB8 /* VentivaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5DEB6824374C9F006A6BB8 /* VentivaderTests.swift */; };
 		D32627E8243A385C00CB212A /* VentilatorParametersManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32627E7243A385C00CB212A /* VentilatorParametersManager.swift */; };
 		D32627EC243A468400CB212A /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32627EB243A468400CB212A /* BaseVC.swift */; };
+		D33914842467C78F0023F9FF /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33914832467C78F0023F9FF /* ImagePicker.swift */; };
+		D33914862467CB7F0023F9FF /* PatientInformationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33914852467CB7F0023F9FF /* PatientInformationManager.swift */; };
+		D33914882467CCF30023F9FF /* EditPatientProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33914872467CCF30023F9FF /* EditPatientProfileViewModel.swift */; };
 		D34430422440E8260087EA9B /* LiveDataChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34430412440E8260087EA9B /* LiveDataChartViewController.swift */; };
 		D34430482440F94B0087EA9B /* ColorPallete.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34430472440F94B0087EA9B /* ColorPallete.swift */; };
 		D344304C24412BB90087EA9B /* LiveDataChartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D344304B24412BB90087EA9B /* LiveDataChartViewModel.swift */; };
@@ -27,6 +30,14 @@
 		D35F4DFF24395A310001FC88 /* VentilatorParameterTileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D35F4DFE24395A310001FC88 /* VentilatorParameterTileView.xib */; };
 		D35F4E01243971BC0001FC88 /* VentilatorStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35F4E00243971BC0001FC88 /* VentilatorStatusView.swift */; };
 		D35F4E07243972000001FC88 /* VentilatorStatusView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D35F4E06243972000001FC88 /* VentilatorStatusView.xib */; };
+		D36CB31B246617D400E5673C /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36CB31A246617D400E5673C /* MainTabBarController.swift */; };
+		D36CB31D246619D200E5673C /* PatientProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36CB31C246619D200E5673C /* PatientProfileViewController.swift */; };
+		D36CB32024661F8D00E5673C /* PatientInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36CB31F24661F8D00E5673C /* PatientInfo.swift */; };
+		D36CB32224662D5700E5673C /* PatientInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36CB32124662D5700E5673C /* PatientInfoView.swift */; };
+		D36CB32424662D6700E5673C /* PatientInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D36CB32324662D6700E5673C /* PatientInfoView.xib */; };
+		D36CB326246661F900E5673C /* PatientProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36CB325246661F900E5673C /* PatientProfileViewModel.swift */; };
+		D3734627247CAD6600809C1E /* UITextField+DatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3734626247CAD6600809C1E /* UITextField+DatePicker.swift */; };
+		D3734629247CADC900809C1E /* UIStackView+Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3734628247CADC900809C1E /* UIStackView+Background.swift */; };
 		D393E7C02453778400555BBD /* turnBleOn.gif in Resources */ = {isa = PBXBuildFile; fileRef = D393E7BD2453778400555BBD /* turnBleOn.gif */; };
 		D393E7C12453778400555BBD /* ventivaderAnimated.gif in Resources */ = {isa = PBXBuildFile; fileRef = D393E7BE2453778400555BBD /* ventivaderAnimated.gif */; };
 		D393E7C22453778400555BBD /* blePermissions.gif in Resources */ = {isa = PBXBuildFile; fileRef = D393E7BF2453778400555BBD /* blePermissions.gif */; };
@@ -34,6 +45,11 @@
 		D393E7D62453801500555BBD /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D393E7CC2453801500555BBD /* OpenSans-Bold.ttf */; };
 		D393E7D72453801500555BBD /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D393E7CD2453801500555BBD /* OpenSans-Light.ttf */; };
 		D393E7D82453801500555BBD /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D393E7CE2453801500555BBD /* OpenSans-Italic.ttf */; };
+		D3970B5B24679E540036ACBF /* EditPatientProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3970B5A24679E540036ACBF /* EditPatientProfileViewController.swift */; };
+		D3970B5D2467A42B0036ACBF /* ProfileFieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3970B5C2467A42B0036ACBF /* ProfileFieldView.xib */; };
+		D3970B5F2467A43C0036ACBF /* ProfileFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3970B5E2467A43C0036ACBF /* ProfileFieldView.swift */; };
+		D3970B612467BB3E0036ACBF /* HKBloodType+Readable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3970B602467BB3E0036ACBF /* HKBloodType+Readable.swift */; };
+		D3970B632467BE6C0036ACBF /* ViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3970B622467BE6C0036ACBF /* ViewHelper.swift */; };
 		D3B5131F243A815A00117C2C /* bleConnectingAnimation.gif in Resources */ = {isa = PBXBuildFile; fileRef = D3B5131E243A815A00117C2C /* bleConnectingAnimation.gif */; };
 		D3C12D51244BE4FE00E0E7A9 /* BLEManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C12D50244BE4FE00E0E7A9 /* BLEManager.swift */; };
 		D3C12D53244CB92000E0E7A9 /* LoadingOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C12D52244CB92000E0E7A9 /* LoadingOverlay.swift */; };
@@ -72,6 +88,9 @@
 		BA5DEB6A24374C9F006A6BB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D32627E7243A385C00CB212A /* VentilatorParametersManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VentilatorParametersManager.swift; sourceTree = "<group>"; };
 		D32627EB243A468400CB212A /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
+		D33914832467C78F0023F9FF /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		D33914852467CB7F0023F9FF /* PatientInformationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientInformationManager.swift; sourceTree = "<group>"; };
+		D33914872467CCF30023F9FF /* EditPatientProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPatientProfileViewModel.swift; sourceTree = "<group>"; };
 		D34430412440E8260087EA9B /* LiveDataChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveDataChartViewController.swift; sourceTree = "<group>"; };
 		D34430472440F94B0087EA9B /* ColorPallete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPallete.swift; sourceTree = "<group>"; };
 		D344304B24412BB90087EA9B /* LiveDataChartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveDataChartViewModel.swift; sourceTree = "<group>"; };
@@ -81,6 +100,14 @@
 		D35F4DFE24395A310001FC88 /* VentilatorParameterTileView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = VentilatorParameterTileView.xib; path = Ventivader/Views/VentilatorParameterTileView.xib; sourceTree = SOURCE_ROOT; };
 		D35F4E00243971BC0001FC88 /* VentilatorStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VentilatorStatusView.swift; path = Ventivader/Views/VentilatorStatusView.swift; sourceTree = SOURCE_ROOT; };
 		D35F4E06243972000001FC88 /* VentilatorStatusView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = VentilatorStatusView.xib; path = Ventivader/Views/VentilatorStatusView.xib; sourceTree = SOURCE_ROOT; };
+		D36CB31A246617D400E5673C /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		D36CB31C246619D200E5673C /* PatientProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientProfileViewController.swift; sourceTree = "<group>"; };
+		D36CB31F24661F8D00E5673C /* PatientInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientInfo.swift; sourceTree = "<group>"; };
+		D36CB32124662D5700E5673C /* PatientInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientInfoView.swift; sourceTree = "<group>"; };
+		D36CB32324662D6700E5673C /* PatientInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PatientInfoView.xib; sourceTree = "<group>"; };
+		D36CB325246661F900E5673C /* PatientProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientProfileViewModel.swift; sourceTree = "<group>"; };
+		D3734626247CAD6600809C1E /* UITextField+DatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+DatePicker.swift"; sourceTree = "<group>"; };
+		D3734628247CADC900809C1E /* UIStackView+Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Background.swift"; sourceTree = "<group>"; };
 		D393E7BD2453778400555BBD /* turnBleOn.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = turnBleOn.gif; sourceTree = "<group>"; };
 		D393E7BE2453778400555BBD /* ventivaderAnimated.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = ventivaderAnimated.gif; sourceTree = "<group>"; };
 		D393E7BF2453778400555BBD /* blePermissions.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = blePermissions.gif; sourceTree = "<group>"; };
@@ -88,6 +115,11 @@
 		D393E7CC2453801500555BBD /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		D393E7CD2453801500555BBD /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
 		D393E7CE2453801500555BBD /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Italic.ttf"; sourceTree = "<group>"; };
+		D3970B5A24679E540036ACBF /* EditPatientProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPatientProfileViewController.swift; sourceTree = "<group>"; };
+		D3970B5C2467A42B0036ACBF /* ProfileFieldView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileFieldView.xib; sourceTree = "<group>"; };
+		D3970B5E2467A43C0036ACBF /* ProfileFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFieldView.swift; sourceTree = "<group>"; };
+		D3970B602467BB3E0036ACBF /* HKBloodType+Readable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HKBloodType+Readable.swift"; sourceTree = "<group>"; };
+		D3970B622467BE6C0036ACBF /* ViewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewHelper.swift; sourceTree = "<group>"; };
 		D3B5131E243A815A00117C2C /* bleConnectingAnimation.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = bleConnectingAnimation.gif; sourceTree = "<group>"; };
 		D3C12D50244BE4FE00E0E7A9 /* BLEManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEManager.swift; sourceTree = "<group>"; };
 		D3C12D52244CB92000E0E7A9 /* LoadingOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoadingOverlay.swift; path = Ventivader/Utilities/LoadingOverlay.swift; sourceTree = SOURCE_ROOT; };
@@ -173,6 +205,7 @@
 				BA5DEB7424375E49006A6BB8 /* ViewControllers */,
 				D3EAFB1A2455E2B80027379D /* Views */,
 				BA5DEB7924375E98006A6BB8 /* Utilities */,
+				D36CB31E24661EC900E5673C /* Models */,
 			);
 			path = Ventivader;
 			sourceTree = "<group>";
@@ -194,6 +227,9 @@
 				D32627EB243A468400CB212A /* BaseVC.swift */,
 				D34430412440E8260087EA9B /* LiveDataChartViewController.swift */,
 				4F25632B243988E300CFD2F1 /* VentivaderBluetoothExtensions.swift */,
+				D36CB31A246617D400E5673C /* MainTabBarController.swift */,
+				D36CB31C246619D200E5673C /* PatientProfileViewController.swift */,
+				D3970B5A24679E540036ACBF /* EditPatientProfileViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -203,6 +239,7 @@
 			children = (
 				D32627E7243A385C00CB212A /* VentilatorParametersManager.swift */,
 				D3C12D50244BE4FE00E0E7A9 /* BLEManager.swift */,
+				D33914852467CB7F0023F9FF /* PatientInformationManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -221,6 +258,11 @@
 				D34430472440F94B0087EA9B /* ColorPallete.swift */,
 				D3E6001824427250007C2F8D /* FontsVentivader.swift */,
 				D3C12D54244CC36D00E0E7A9 /* ErrorScreenProvider.swift */,
+				D3970B602467BB3E0036ACBF /* HKBloodType+Readable.swift */,
+				D3970B622467BE6C0036ACBF /* ViewHelper.swift */,
+				D33914832467C78F0023F9FF /* ImagePicker.swift */,
+				D3734626247CAD6600809C1E /* UITextField+DatePicker.swift */,
+				D3734628247CADC900809C1E /* UIStackView+Background.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -249,8 +291,18 @@
 			children = (
 				D35F4DFA243944D50001FC88 /* VentilatorControlPanelViewModel.swift */,
 				D344304B24412BB90087EA9B /* LiveDataChartViewModel.swift */,
+				D36CB325246661F900E5673C /* PatientProfileViewModel.swift */,
+				D33914872467CCF30023F9FF /* EditPatientProfileViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		D36CB31E24661EC900E5673C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D36CB31F24661F8D00E5673C /* PatientInfo.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		D393E7C524537FEC00555BBD /* OpenSans */ = {
@@ -293,6 +345,10 @@
 				D35F4E06243972000001FC88 /* VentilatorStatusView.xib */,
 				D3EAFB162455E1280027379D /* ErrorScreenView.xib */,
 				D3EAFB182455E27F0027379D /* ErrorScreenView.swift */,
+				D36CB32124662D5700E5673C /* PatientInfoView.swift */,
+				D36CB32324662D6700E5673C /* PatientInfoView.xib */,
+				D3970B5C2467A42B0036ACBF /* ProfileFieldView.xib */,
+				D3970B5E2467A43C0036ACBF /* ProfileFieldView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -380,6 +436,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D36CB32424662D6700E5673C /* PatientInfoView.xib in Resources */,
 				BA5DEB5E24374C9F006A6BB8 /* LaunchScreen.storyboard in Resources */,
 				BA5DEB5B24374C9F006A6BB8 /* Assets.xcassets in Resources */,
 				D393E7D62453801500555BBD /* OpenSans-Bold.ttf in Resources */,
@@ -393,6 +450,7 @@
 				D3B5131F243A815A00117C2C /* bleConnectingAnimation.gif in Resources */,
 				D3E60017244270D7007C2F8D /* ONEDAY.ttf in Resources */,
 				D393E7C12453778400555BBD /* ventivaderAnimated.gif in Resources */,
+				D3970B5D2467A42B0036ACBF /* ProfileFieldView.xib in Resources */,
 				D393E7D22453801500555BBD /* OpenSans-Regular.ttf in Resources */,
 				BA5DEB5924374C9C006A6BB8 /* Main.storyboard in Resources */,
 			);
@@ -453,20 +511,34 @@
 			files = (
 				D34430422440E8260087EA9B /* LiveDataChartViewController.swift in Sources */,
 				D3EAFB1B2455F3B40027379D /* ErrorScreenView.swift in Sources */,
+				D36CB31B246617D400E5673C /* MainTabBarController.swift in Sources */,
+				D33914842467C78F0023F9FF /* ImagePicker.swift in Sources */,
+				D3970B5B24679E540036ACBF /* EditPatientProfileViewController.swift in Sources */,
+				D3970B632467BE6C0036ACBF /* ViewHelper.swift in Sources */,
+				D36CB31D246619D200E5673C /* PatientProfileViewController.swift in Sources */,
 				D35F4DF824393FA60001FC88 /* VentilatorControlPanelViewController.swift in Sources */,
 				D32627EC243A468400CB212A /* BaseVC.swift in Sources */,
 				D344304C24412BB90087EA9B /* LiveDataChartViewModel.swift in Sources */,
 				D34430482440F94B0087EA9B /* ColorPallete.swift in Sources */,
+				D3970B5F2467A43C0036ACBF /* ProfileFieldView.swift in Sources */,
 				D35F4DFB243944D50001FC88 /* VentilatorControlPanelViewModel.swift in Sources */,
+				D36CB32224662D5700E5673C /* PatientInfoView.swift in Sources */,
 				4F25632C243988E300CFD2F1 /* VentivaderBluetoothExtensions.swift in Sources */,
 				BA5DEB5624374C9C006A6BB8 /* VentivaderViewController.swift in Sources */,
 				D3C12D55244CC36D00E0E7A9 /* ErrorScreenProvider.swift in Sources */,
+				D3970B612467BB3E0036ACBF /* HKBloodType+Readable.swift in Sources */,
 				D3C12D53244CB92000E0E7A9 /* LoadingOverlay.swift in Sources */,
+				D3734627247CAD6600809C1E /* UITextField+DatePicker.swift in Sources */,
+				D36CB32024661F8D00E5673C /* PatientInfo.swift in Sources */,
+				D33914862467CB7F0023F9FF /* PatientInformationManager.swift in Sources */,
 				D3C12D51244BE4FE00E0E7A9 /* BLEManager.swift in Sources */,
 				D32627E8243A385C00CB212A /* VentilatorParametersManager.swift in Sources */,
 				BA5DEB5424374C9C006A6BB8 /* AppDelegate.swift in Sources */,
+				D36CB326246661F900E5673C /* PatientProfileViewModel.swift in Sources */,
 				D35F4E01243971BC0001FC88 /* VentilatorStatusView.swift in Sources */,
+				D3734629247CADC900809C1E /* UIStackView+Background.swift in Sources */,
 				D3E6001924427250007C2F8D /* FontsVentivader.swift in Sources */,
+				D33914882467CCF30023F9FF /* EditPatientProfileViewModel.swift in Sources */,
 				D35F4DFD243949E80001FC88 /* VentilatorParameterTileView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

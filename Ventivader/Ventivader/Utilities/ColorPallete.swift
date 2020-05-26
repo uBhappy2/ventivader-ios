@@ -11,9 +11,9 @@ import UIKit
 class ColorPallete {
     // Colors obtained from: https://colorhunt.co/palettes/dark
     static let backgroundColor = UIColor(hex: "#1b262c")!
+    static let highlightColor = UIColor(hex: "#bbe1fa")!
     static let secondaryBackgroundColor = UIColor(hex: "#0f4c75")!
     static let secondaryHighlightColor = UIColor(hex: "#3282b8")!
-    static let highlightColor = UIColor(hex: "#bbe1fa")!
     static let outstandingBackground = UIColor(hex: "#e6c62f")!
     
     // Errors

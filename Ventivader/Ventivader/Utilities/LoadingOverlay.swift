@@ -22,14 +22,10 @@ public class LoadingOverlay {
         let animationView = UIImageView()
         animationView.loadGif(name: "bleConnectingAnimation")
         
-        let titleLabel = UILabel()
-        titleLabel.text = NSLocalizedString("Connecting BLE...", comment: "title for connecting BLE")
-        titleLabel.updateFont(name: VentivaderFonts.titleFont)
-        titleLabel.textAlignment =  .center
+        let titleLabel = createTitleLabel()
         
         containerView.addSubview(animationView)
         containerView.addSubview(titleLabel)
-        
         
         applyContraints(containerView: containerView,
                         animationView: animationView,
@@ -85,6 +81,14 @@ public class LoadingOverlay {
         ])
         
         containerView.layer.cornerRadius = 16
+    }
+    
+    private func createTitleLabel() -> UILabel {
+        let titleLabel = UILabel()
+        titleLabel.text = NSLocalizedString("Connecting BLE...", comment: "title for connecting BLE")
+        titleLabel.updateFont(name: VentivaderFonts.titleFont)
+        titleLabel.textAlignment =  .center
+        return titleLabel
     }
 }
 

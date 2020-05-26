@@ -368,30 +368,34 @@
         <!--Tab Bar View Controller-->
         <scene sceneID="6PC-J6-eft">
             <objects>
-                <tabBarController title="Tab Bar View Controller" automaticallyAdjustsScrollViewInsets="NO" id="LRv-oC-hH5" sceneMemberID="viewController">
+                <tabBarController title="Tab Bar View Controller" automaticallyAdjustsScrollViewInsets="NO" id="LRv-oC-hH5" customClass="MainTabBarController" customModule="Ventivader" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pUb-k6-X9e">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="unselectedItemTintColor">
+                                <color key="value" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
                         <segue destination="ON2-Da-WUD" kind="relationship" relationship="viewControllers" id="DgL-0H-Rwc"/>
-                        <segue destination="c0U-ia-TXG" kind="relationship" relationship="viewControllers" id="fIQ-eW-mFX"/>
-                        <segue destination="WI7-RU-hSl" kind="relationship" relationship="viewControllers" id="xyQ-LI-PoS"/>
-                        <segue destination="v2F-Jr-slf" kind="relationship" relationship="viewControllers" id="NDt-W8-43B"/>
                         <segue destination="Y1D-gV-nFC" kind="relationship" relationship="viewControllers" id="wgj-dq-AK4"/>
+                        <segue destination="c0U-ia-TXG" kind="relationship" relationship="viewControllers" id="fIQ-eW-mFX"/>
+                        <segue destination="v2F-Jr-slf" kind="relationship" relationship="viewControllers" id="NDt-W8-43B"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nNP-Hz-zWZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="23.741007194244606" y="27.517985611510792"/>
         </scene>
-        <!--Ventilator-->
+        <!--Console-->
         <scene sceneID="35J-5J-YeM">
             <objects>
-                <navigationController title="Ventilator" automaticallyAdjustsScrollViewInsets="NO" id="ON2-Da-WUD" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Ventilator" id="6pX-I4-5er" userLabel="Ventilator"/>
+                <navigationController title="Console" automaticallyAdjustsScrollViewInsets="NO" id="ON2-Da-WUD" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Console" image="keyboard" catalog="system" id="6pX-I4-5er" userLabel="Ventilator"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1ia-7V-NcM">
@@ -413,18 +417,236 @@
         <!--Profile View Controller-->
         <scene sceneID="Ta6-S9-AYI">
             <objects>
-                <viewController id="6HO-67-M75" userLabel="Profile View Controller" customClass="ProfileVC" customModule="Ventivader" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="6HO-67-M75" userLabel="Profile View Controller" customClass="PatientProfileViewController" customModule="Ventivader" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DSH-Vj-25y">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="THu-78-wix">
+                                <rect key="frame" x="0.0" y="88" width="414" height="224"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pSF-tr-Eis">
+                                        <rect key="frame" x="140" y="32" width="134" height="134.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="pSF-tr-Eis" secondAttribute="height" multiplier="1:1" id="2qs-qe-a3e"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Patient Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gN1-oM-pg0">
+                                        <rect key="frame" x="155.5" y="174.5" width="103" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HKF-5C-q9h">
+                                        <rect key="frame" x="368" y="16" width="30" height="30"/>
+                                        <state key="normal" title="Edit"/>
+                                        <connections>
+                                            <action selector="editButtonTap:" destination="6HO-67-M75" eventType="touchUpInside" id="8vv-Oh-QH3"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="gN1-oM-pg0" firstAttribute="top" secondItem="pSF-tr-Eis" secondAttribute="bottom" constant="8" id="19x-fC-yb1"/>
+                                    <constraint firstItem="pSF-tr-Eis" firstAttribute="centerX" secondItem="THu-78-wix" secondAttribute="centerX" id="5mT-nc-Oee"/>
+                                    <constraint firstAttribute="trailing" secondItem="HKF-5C-q9h" secondAttribute="trailing" constant="16" id="Aep-lG-t40"/>
+                                    <constraint firstItem="HKF-5C-q9h" firstAttribute="top" secondItem="THu-78-wix" secondAttribute="top" constant="16" id="Azu-CD-nSP"/>
+                                    <constraint firstItem="pSF-tr-Eis" firstAttribute="height" secondItem="THu-78-wix" secondAttribute="height" multiplier="0.6" id="Py2-lp-2n2"/>
+                                    <constraint firstItem="pSF-tr-Eis" firstAttribute="top" secondItem="THu-78-wix" secondAttribute="top" constant="32" id="l66-sh-Uqx"/>
+                                    <constraint firstItem="gN1-oM-pg0" firstAttribute="centerX" secondItem="THu-78-wix" secondAttribute="centerX" id="uxT-2A-mYl"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="GSb-7B-2Yp">
+                                <rect key="frame" x="0.0" y="401.5" width="414" height="89.5"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bhs-A1-031" customClass="PatientInfoView" customModule="Ventivader" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="207" height="89.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vRj-2u-u6D" customClass="PatientInfoView" customModule="Ventivader" customModuleProvider="target">
+                                        <rect key="frame" x="207" y="0.0" width="207" height="89.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="9Nj-dE-vBr">
+                                <rect key="frame" x="0.0" y="312" width="414" height="89.5"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LxL-gA-Xws" customClass="PatientInfoView" customModule="Ventivader" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="207" height="89.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Fn-WM-7U4" customClass="PatientInfoView" customModule="Ventivader" customModuleProvider="target">
+                                        <rect key="frame" x="207" y="0.0" width="207" height="89.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T1W-4B-sm6">
+                                <rect key="frame" x="0.0" y="491" width="414" height="322"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Emergency Contact" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y3E-u6-NJn">
+                                        <rect key="frame" x="131.5" y="16" width="151.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GQx-Vy-LU4">
+                                        <rect key="frame" x="152" y="68.5" width="110.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ImW-3M-GCK">
+                                        <rect key="frame" x="149.5" y="105" width="115" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="ImW-3M-GCK" firstAttribute="centerX" secondItem="T1W-4B-sm6" secondAttribute="centerX" id="Csz-9h-zrJ"/>
+                                    <constraint firstItem="y3E-u6-NJn" firstAttribute="top" secondItem="T1W-4B-sm6" secondAttribute="top" constant="16" id="L23-mW-h47"/>
+                                    <constraint firstItem="ImW-3M-GCK" firstAttribute="top" secondItem="GQx-Vy-LU4" secondAttribute="bottom" constant="16" id="QpV-Or-dKr"/>
+                                    <constraint firstItem="y3E-u6-NJn" firstAttribute="centerX" secondItem="T1W-4B-sm6" secondAttribute="centerX" id="cBW-Ts-tTg"/>
+                                    <constraint firstItem="GQx-Vy-LU4" firstAttribute="centerX" secondItem="T1W-4B-sm6" secondAttribute="centerX" id="vxn-C0-iqp"/>
+                                    <constraint firstItem="GQx-Vy-LU4" firstAttribute="top" secondItem="y3E-u6-NJn" secondAttribute="bottom" constant="32" id="xvR-cB-M0c"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="GSb-7B-2Yp" firstAttribute="height" secondItem="9Nj-dE-vBr" secondAttribute="height" id="2A3-zF-4UV"/>
+                            <constraint firstItem="FXy-pD-cBF" firstAttribute="trailing" secondItem="9Nj-dE-vBr" secondAttribute="trailing" id="2rU-j4-t2f"/>
+                            <constraint firstItem="T1W-4B-sm6" firstAttribute="leading" secondItem="FXy-pD-cBF" secondAttribute="leading" id="8sf-So-S6O"/>
+                            <constraint firstItem="9Nj-dE-vBr" firstAttribute="height" secondItem="DSH-Vj-25y" secondAttribute="height" multiplier="0.1" id="ETI-ig-d1Z"/>
+                            <constraint firstItem="FXy-pD-cBF" firstAttribute="trailing" secondItem="T1W-4B-sm6" secondAttribute="trailing" id="K56-TV-OBH"/>
+                            <constraint firstItem="THu-78-wix" firstAttribute="leading" secondItem="FXy-pD-cBF" secondAttribute="leading" id="LDv-9O-6y3"/>
+                            <constraint firstItem="FXy-pD-cBF" firstAttribute="trailing" secondItem="THu-78-wix" secondAttribute="trailing" id="WhU-5U-UO9"/>
+                            <constraint firstItem="THu-78-wix" firstAttribute="top" secondItem="FXy-pD-cBF" secondAttribute="top" id="YyI-ck-3bi"/>
+                            <constraint firstItem="9Nj-dE-vBr" firstAttribute="leading" secondItem="FXy-pD-cBF" secondAttribute="leading" id="cWK-A8-deQ"/>
+                            <constraint firstItem="GSb-7B-2Yp" firstAttribute="top" secondItem="9Nj-dE-vBr" secondAttribute="bottom" id="dqG-3P-g2p"/>
+                            <constraint firstItem="T1W-4B-sm6" firstAttribute="top" secondItem="GSb-7B-2Yp" secondAttribute="bottom" id="ieI-hr-hh6"/>
+                            <constraint firstItem="9Nj-dE-vBr" firstAttribute="top" secondItem="THu-78-wix" secondAttribute="bottom" id="p3R-og-VHu"/>
+                            <constraint firstItem="THu-78-wix" firstAttribute="height" secondItem="DSH-Vj-25y" secondAttribute="height" multiplier="0.25" id="qjP-z7-AhQ"/>
+                            <constraint firstItem="FXy-pD-cBF" firstAttribute="bottom" secondItem="T1W-4B-sm6" secondAttribute="bottom" id="rut-cx-dGF"/>
+                            <constraint firstItem="GSb-7B-2Yp" firstAttribute="leading" secondItem="FXy-pD-cBF" secondAttribute="leading" id="u8z-Lh-ueJ"/>
+                            <constraint firstItem="FXy-pD-cBF" firstAttribute="trailing" secondItem="GSb-7B-2Yp" secondAttribute="trailing" id="xHH-NH-FQR"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="FXy-pD-cBF"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Profile" id="o55-WM-UaI"/>
+                    <navigationItem key="navigationItem" id="o55-WM-UaI"/>
+                    <connections>
+                        <outlet property="ageTileView" destination="Bhs-A1-031" id="cZR-fP-Qma"/>
+                        <outlet property="bloodTypeTileView" destination="vRj-2u-u6D" id="C5f-bp-qvA"/>
+                        <outlet property="editButton" destination="HKF-5C-q9h" id="bdF-mR-2wr"/>
+                        <outlet property="emergencyContactNameLabel" destination="GQx-Vy-LU4" id="TfW-Xu-jou"/>
+                        <outlet property="emergencyContactPhoneLabel" destination="ImW-3M-GCK" id="dsF-Ai-2Ar"/>
+                        <outlet property="emergencyContactTitleLabel" destination="y3E-u6-NJn" id="crr-Zx-IMF"/>
+                        <outlet property="heightTileView" destination="LxL-gA-Xws" id="9aN-rh-oxX"/>
+                        <outlet property="nameLabel" destination="gN1-oM-pg0" id="6V1-Tc-83G"/>
+                        <outlet property="profileImage" destination="pSF-tr-Eis" id="9OZ-F7-S41"/>
+                        <outlet property="weightTileView" destination="1Fn-WM-7U4" id="2hr-eu-XWR"/>
+                        <segue destination="gfJ-n7-PAl" kind="presentation" identifier="editPatientProfileFromPatientProfile" id="bHr-NI-2Ws"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EAB-jx-WCz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1529" y="823"/>
+            <point key="canvasLocation" x="1528.985507246377" y="822.99107142857144"/>
+        </scene>
+        <!--Edit Patient Profile View Controller-->
+        <scene sceneID="EJx-Fc-M23">
+            <objects>
+                <viewController id="gfJ-n7-PAl" customClass="EditPatientProfileViewController" customModule="Ventivader" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0Wi-nN-sIs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lNG-tD-hZg">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="168.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HUr-W3-I8y">
+                                        <rect key="frame" x="165" y="16" width="84" height="84"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="HUr-W3-I8y" secondAttribute="height" multiplier="1:1" id="MZ9-5Q-21z"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oww-pR-ZKX">
+                                        <rect key="frame" x="173.5" y="108" width="67" height="30"/>
+                                        <state key="normal" title="Edit"/>
+                                        <connections>
+                                            <action selector="editProfileImageButtonTapped:" destination="gfJ-n7-PAl" eventType="touchUpInside" id="7Bq-Ku-Q82"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="HUr-W3-I8y" firstAttribute="height" secondItem="lNG-tD-hZg" secondAttribute="height" multiplier="0.5" priority="999" id="Jge-A4-unW"/>
+                                    <constraint firstItem="HUr-W3-I8y" firstAttribute="centerX" secondItem="lNG-tD-hZg" secondAttribute="centerX" id="KYL-Ec-iRl"/>
+                                    <constraint firstItem="oww-pR-ZKX" firstAttribute="width" secondItem="HUr-W3-I8y" secondAttribute="width" multiplier="0.8" id="aBy-YQ-w0w"/>
+                                    <constraint firstItem="oww-pR-ZKX" firstAttribute="top" secondItem="HUr-W3-I8y" secondAttribute="bottom" constant="8" id="c51-cf-ABf"/>
+                                    <constraint firstItem="HUr-W3-I8y" firstAttribute="top" secondItem="lNG-tD-hZg" secondAttribute="top" constant="16" id="spF-IB-NIC"/>
+                                    <constraint firstItem="oww-pR-ZKX" firstAttribute="centerX" secondItem="lNG-tD-hZg" secondAttribute="centerX" id="uzV-XD-mei"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="hVs-V1-TRl">
+                                <rect key="frame" x="0.0" y="168.5" width="414" height="505"/>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cqa-Cy-7cs">
+                                <rect key="frame" x="53.5" y="705.5" width="100" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="kdX-OX-yx1"/>
+                                    <constraint firstAttribute="height" constant="50" id="wxQ-4C-KSf"/>
+                                </constraints>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelButtonTapped:" destination="gfJ-n7-PAl" eventType="touchUpInside" id="46r-gW-xlc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ozW-1b-wHJ">
+                                <rect key="frame" x="260.5" y="705.5" width="100" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="0RD-67-Mfc"/>
+                                    <constraint firstAttribute="width" constant="100" id="4CC-08-uf4"/>
+                                </constraints>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveButtonTapped:" destination="gfJ-n7-PAl" eventType="touchUpInside" id="c1S-E1-s8W"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="hVs-V1-TRl" firstAttribute="height" secondItem="0Wi-nN-sIs" secondAttribute="height" multiplier="0.6" id="1Gj-xW-Get"/>
+                            <constraint firstItem="lNG-tD-hZg" firstAttribute="leading" secondItem="Kx0-lE-n2R" secondAttribute="leading" id="IRv-SD-oEY"/>
+                            <constraint firstItem="lNG-tD-hZg" firstAttribute="top" secondItem="Kx0-lE-n2R" secondAttribute="top" id="Lgi-aC-EUd"/>
+                            <constraint firstItem="Kx0-lE-n2R" firstAttribute="trailing" secondItem="lNG-tD-hZg" secondAttribute="trailing" id="PfP-Go-Tm8"/>
+                            <constraint firstItem="lNG-tD-hZg" firstAttribute="height" secondItem="0Wi-nN-sIs" secondAttribute="height" multiplier="0.2" id="TVa-PH-9v8"/>
+                            <constraint firstItem="hVs-V1-TRl" firstAttribute="leading" secondItem="Kx0-lE-n2R" secondAttribute="leading" id="UcD-RP-ST8"/>
+                            <constraint firstItem="cqa-Cy-7cs" firstAttribute="top" secondItem="hVs-V1-TRl" secondAttribute="bottom" constant="32" id="YLv-yW-ISu"/>
+                            <constraint firstItem="hVs-V1-TRl" firstAttribute="top" secondItem="lNG-tD-hZg" secondAttribute="bottom" id="c2U-qO-9UI"/>
+                            <constraint firstItem="ozW-1b-wHJ" firstAttribute="centerX" secondItem="0Wi-nN-sIs" secondAttribute="centerX" multiplier="1.5" id="cR9-bK-GhW"/>
+                            <constraint firstItem="cqa-Cy-7cs" firstAttribute="centerX" secondItem="0Wi-nN-sIs" secondAttribute="centerX" multiplier="0.5" id="sEp-36-UEB"/>
+                            <constraint firstItem="ozW-1b-wHJ" firstAttribute="top" secondItem="hVs-V1-TRl" secondAttribute="bottom" constant="32" id="uP5-rF-X3w"/>
+                            <constraint firstItem="Kx0-lE-n2R" firstAttribute="trailing" secondItem="hVs-V1-TRl" secondAttribute="trailing" id="wSB-ln-4fa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Kx0-lE-n2R"/>
+                    </view>
+                    <connections>
+                        <outlet property="cancelButton" destination="cqa-Cy-7cs" id="VQD-Vb-Ev8"/>
+                        <outlet property="editProfileImageButton" destination="oww-pR-ZKX" id="gG6-Ck-7rX"/>
+                        <outlet property="fieldsStackView" destination="hVs-V1-TRl" id="y7M-fs-pHU"/>
+                        <outlet property="headerViewHeightConstraint" destination="TVa-PH-9v8" id="1iQ-LN-FhX"/>
+                        <outlet property="profileImage" destination="HUr-W3-I8y" id="FWO-ie-2za"/>
+                        <outlet property="saveProfileButton" destination="ozW-1b-wHJ" id="2cE-mH-Mf2"/>
+                        <outlet property="topView" destination="lNG-tD-hZg" id="r70-BP-gIz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rrq-wW-L8m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2438" y="823"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="Ow7-mm-wkq">
@@ -443,27 +665,11 @@
             </objects>
             <point key="canvasLocation" x="1529" y="1553"/>
         </scene>
-        <!--Plot View Controller-->
-        <scene sceneID="yoP-yP-tlT">
-            <objects>
-                <viewController id="mS0-hD-ivi" userLabel="Plot View Controller" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="jRn-36-bRm">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="Ydl-nb-D4z"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Graph Plot" id="R5Z-EN-NT1"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RiK-gl-xFS" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1529" y="2288"/>
-        </scene>
         <!--Profile-->
         <scene sceneID="mpc-26-wIK">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="c0U-ia-TXG" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Profile" id="rGg-8i-y6R" userLabel="Profile"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="person.circle" catalog="system" id="rGg-8i-y6R" userLabel="Profile"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hrv-0a-25r">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -482,7 +688,7 @@
         <scene sceneID="UnX-HR-Aeo">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="v2F-Jr-slf" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Settings" id="Fxq-Py-4yi"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="gear" catalog="system" id="Fxq-Py-4yi"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="CEe-NW-gaj">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -497,30 +703,11 @@
             </objects>
             <point key="canvasLocation" x="776" y="1553"/>
         </scene>
-        <!--Plot-->
-        <scene sceneID="Y3U-Vk-Nlt">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WI7-RU-hSl" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Plot" id="OGe-dO-CH8"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="QSt-jb-9j4">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="mS0-hD-ivi" kind="relationship" relationship="rootViewController" id="eJs-VC-nRd"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9zL-TR-LjN" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="776" y="2288"/>
-        </scene>
-        <!--Item-->
+        <!--Ventivader-->
         <scene sceneID="hGZ-sz-G91">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Y1D-gV-nFC" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Vav-JA-iHN"/>
+                <navigationController title="Ventivader" automaticallyAdjustsScrollViewInsets="NO" id="Y1D-gV-nFC" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Ventivader" image="waveform.path.ecg" catalog="system" id="Vav-JA-iHN"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JQO-sn-M9X">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -636,4 +823,10 @@
     <inferredMetricsTieBreakers>
         <segue reference="HWF-Y3-dkI"/>
     </inferredMetricsTieBreakers>
+    <resources>
+        <image name="gear" catalog="system" width="128" height="119"/>
+        <image name="keyboard" catalog="system" width="128" height="70"/>
+        <image name="person.circle" catalog="system" width="128" height="121"/>
+        <image name="waveform.path.ecg" catalog="system" width="128" height="124"/>
+    </resources>
 </document>
